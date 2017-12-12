@@ -70,7 +70,7 @@ The Evidence is a proof of the existence of the causal interaction (e.g, experim
 Publication identifier in which the causality statement has been highlighted. We recommend to provide the pubmed ID. Example: pubmed:1234567
 It could also be a list of references, in that case, separate the different pubmed IDs with a vertical bar "|".
 
-## Text
+### Text
 Free text field that should contain the exact sentence from the reference where the causal interaction is mentionned. 
 
 ## Defining __Context__ objects
@@ -90,4 +90,5 @@ Concrete example of causality statements.
 
 ## Contributors
 Vasundra Touré (vasundra.toure@ntnu.no)
+
 *more to be added*
