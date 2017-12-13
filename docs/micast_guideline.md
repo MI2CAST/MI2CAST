@@ -1,6 +1,6 @@
 # MICAST Guideline (under construction)
 
-The MICAST guideline describes the minimum information  that is necessary to depict causal interactions in Biology. The aim is to homogeneise the representation of causality within the community to make the data “FAIR” (Findable, Accessible, Interoperable and Reproducible). 
+The MICAST guideline describes the minimum information  that is necessary to depict causal interactions in Biology. The aim is to homogeneise the representation of causality within the community to make the data generated “FAIR” (Findable, Accessible, Interoperable and Reproducible). 
 
 This guideline targets curators and data providers interested in the representation of causality in molecular interactions and biological systems. 
 
@@ -15,7 +15,7 @@ In MICAST, we define the object __Entity__ for representing the source and targe
 Furthermore, the challenge of representing causality statements relies on capturing enough contextual information about the elements that compose the causality statement. The context is important to define boundaries under which a specific causal statement is true. We would like to define this as a __Context__ object.
 
 
-Each object can contain a certain number of mandatory terms that will be clarified below. For each term, recommendations of ontologies to use to depict the data are suggested. Whenever it is possible, we strongly advise to follow the recommendations.
+Each object can contain a certain number of mandatory terms that will be clarified below. For each term, recommendations of ontologies to use to depict the data are suggested. We strongly advise to follow the recommendations.
 
 
 ## Defining __Entity__ objects 
@@ -74,21 +74,26 @@ It could also be a list of references, in that case, separate the different pubm
 Free text field that should contain the exact sentence from the reference where the causal interaction is mentionned. 
 
 ## Defining __Context__ objects
-### Causal observations
-#### Species
-#### Cell Type
-#### Tissue Type
+
+### Species
+Type of species wher the causal interaction is observed. We recommend to use the [Taxonomy ID](https://www.ncbi.nlm.nih.gov/taxonomy) from NCBI. For example: 9606 for *Homo sapiens*.
+
+### Cell Type
+Cell type where the causal interaction occurs. Recommendation to come.
+
+### Tissue Type
+Tissue type where the causal interaction occurs. We recommend to use either [BRENDA](https://www.brenda-enzymes.org/ontology.php?ontology_id=3) or [Uberon](http://uberon.github.io/about.html).
 
 ## Summary
-In this section, we will provide a table summarising the terms of each object defined above.
+In this section, we will provide a table summarising the list of terms necessary for object defined above.
 
 ## Format
-In this section, we will provide a list of formats that follow the MICAST guidelines to represent causality statements.
+In this section, we will provide a list of formats that follows the MICAST guidelines to represent causality statements.
  
 ## Examples
 Concrete example of causality statements. 
 
 ## Contributors
-Vasundra Touré (vasundra.toure@ntnu.no)
+Vasundra Touré ([vasundra.toure@ntnu.no](mailto:vasundra.toure@ntnu.no))
 
-*more to be added*
+*Please add your name here*
