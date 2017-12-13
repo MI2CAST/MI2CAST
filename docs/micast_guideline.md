@@ -76,7 +76,7 @@ Free text field that should contain the exact sentence from the reference where 
 ## Defining __Context__ objects
 
 ### Species
-Type of species wher the causal interaction is observed. We recommend to use the [Taxonomy ID](https://www.ncbi.nlm.nih.gov/taxonomy) from NCBI. For example: 9606 for *Homo sapiens*.
+Type of species where the causal interaction is observed. We recommend to use the [Taxonomy ID](https://www.ncbi.nlm.nih.gov/taxonomy) from NCBI. For example: 9606 for *Homo sapiens*.
 
 ### Cell Type
 Cell type where the causal interaction occurs. Recommendation to come.
