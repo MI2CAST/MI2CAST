@@ -112,7 +112,7 @@ In this section, we provide tables summarising the list of terms necessary for t
 |----|----|----|
 | Species | NCBI Taxonomy | `9606` (*Homo sapiens*) |
 | Cell Type | BRENDA / Cellosaurus / CL | `BTO:0002733` (embryonic kidney cell line) |
-| Tissue Type | BRENDA or Uberon | `UBERON:0004819` (kidney epithelium) |
+| Tissue Type | BRENDA / Uberon | `UBERON:0004819` (kidney epithelium) |
 
 
 ## Format
