@@ -79,7 +79,7 @@ Free text field that should contain the exact sentence from the reference where 
 Type of species where the causal interaction is observed. We recommend to use the [Taxonomy ID](https://www.ncbi.nlm.nih.gov/taxonomy) from NCBI. For example: `9606` for *Homo sapiens*.
 
 ### Cell Type
-Cell type where the causal interaction occurs. Recommendation to discussed, see issue [#5](https://github.com/vtoure/MICAST/issues/5).
+Cell type where the causal interaction occurs. Currently, we can recommend to use [BRENDA](https://www.brenda-enzymes.org/ontology.php?ontology_id=3), [Cellosaurus](https://web.expasy.org/cellosaurus/) or [Cell Ontology](https://obofoundry.org/ontology/cl.html). But the recommendations need to be discussed, see issue [#5](https://github.com/vtoure/MICAST/issues/5).
 
 ### Tissue Type
 Tissue type where the causal interaction occurs. We recommend to use either [BRENDA](https://www.brenda-enzymes.org/ontology.php?ontology_id=3) or [Uberon](http://uberon.github.io/about.html).
@@ -87,7 +87,7 @@ Tissue type where the causal interaction occurs. We recommend to use either [BRE
 
 
 ## Summary
-In this section, we will provide tables summarising the list of terms necessary for the three objects defined above, along with an example for each term.
+In this section, we provide tables summarising the list of terms necessary for the three objects defined above, along with an example for each term.
 
 ### Summary of terms used for Entity
 
@@ -108,6 +108,11 @@ In this section, we will provide tables summarising the list of terms necessary 
 | Text | free text | `the degradation of Akt by MULAN suppresses cell proliferation and viability.` |
 
 ### Summary of terms used for Context
+| Term | Ontology | Example (meaning) |
+|----|----|----|
+| Species | NCBI Taxonomy | `9606` (*Homo sapiens*) |
+| Cell Type | BRENDA / Cellosaurus / CL | `BTO:0002733` (embryonic kidney cell line) |
+| Tissue Type | BRENDA or Uberon | `UBERON:0004819` (kidney epithelium) |
 
 
 ## Format
