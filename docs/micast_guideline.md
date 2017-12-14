@@ -19,7 +19,7 @@ Each object can contain a certain number of mandatory terms that will be clarifi
 
 
 ## Defining __Entity__ objects 
-The __Entity__ object can either be a source (the regulator) or a target (the regulated). In MICAST, we consider the following terms mandatory to be defined for representing an __Entity__: Identifier, Name, Type, Activity.
+The __Entity__ object can either be a source (the regulator) or a target (the regulated). The nature (source or target) of the entity should be explicit. In MICAST, we consider the following terms mandatory to be defined for representing an __Entity__: Identifier, Name, Type, Activity.
 
 ### Identifier
 Unique identification number represented as follow: *databaseName:identifier*. For example: `uniprotkb:A12345`
@@ -57,7 +57,7 @@ The __Causal Interaction__ object is the core element of a causality statement. 
 The type of regulation exerced by the source entity upon the target entity. Recommendation to come.
 
 ### Mechanism
-The modification that happens to the target __Entity__ (e.g, phosphorylation, binding, etc).  We recommend to use the [Molecular Interaction Controlled Vocabulary](https://www.ebi.ac.uk/ols/ontologies/mi), branch [causal interaction](https://www.ebi.ac.uk/ols/ontologies/mi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FMI_2233).
+The modification that happens to the target __Entity__ (e.g, phosphorylation, binding, etc).  We recommend to use the [Molecular Interaction Controlled Vocabulary](https://www.ebi.ac.uk/ols/ontologies/mi), branch [causal interaction](https://www.ebi.ac.uk/ols/ontologies/mi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FMI_2233) or branch [interaction type](https://www.ebi.ac.uk/ols/ontologies/mi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FMI_0190).
 
 ### Localisation 
 Description of the localisation of the causal interaction. The causal interaction can occur inside a cell or between two cells. We recommend to use the [Gene Ontology Cellular Component](http://geneontology.org/) (GO:CC). Alternatively it could also be represented with a combination of GO:CC and the host organism (Species)/Cell Type (to be further developed).
@@ -101,9 +101,9 @@ In this section, we will provide tables summarising the list of terms necessary 
 | Term | Ontology | Example (Meaning) |
 |---|---|---|
 | Regulation | ? | ? |
-| Mechanism | MI | `MI:2255` (chemical inhibition reaction) |
-| Localisation | GO:CC | `GO:0005634` (nucleus) |
-| Evidence | ECO | `ECO:0001809` (DNA affinity chromatography evidence) |
+| Mechanism | MI | `MI:0220` (ubiquitination reaction) |
+| Localisation | GO:CC | `GO:0005829` (cytosol) |
+| Evidence | ECO | `ECO:0001089` (in vivo ubiquitination assay evidence) |
 | Reference | Pubmed | `22410793` |
 | Text | free text | `the degradation of Akt by MULAN suppresses cell proliferation and viability.` |
 
