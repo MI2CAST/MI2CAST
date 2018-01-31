@@ -78,11 +78,8 @@ Free text field that should contain the exact sentence from the reference where 
 ### Species
 Type of species where the causal interaction is observed. We recommend to use the [Taxonomy ID](https://www.ncbi.nlm.nih.gov/taxonomy) from NCBI. For example: `9606` for *Homo sapiens*.
 
-### Cell Type
-Cell type where the causal interaction occurs. Currently, we can recommend to use [BRENDA](https://www.brenda-enzymes.org/ontology.php?ontology_id=3), [Cellosaurus](https://web.expasy.org/cellosaurus/) or [Cell Ontology](https://obofoundry.org/ontology/cl.html). But the recommendations need to be discussed, see issue [#5](https://github.com/vtoure/MICAST/issues/5).
-
-### Tissue Type
-Tissue type where the causal interaction occurs. We recommend to use either [BRENDA](https://www.brenda-enzymes.org/ontology.php?ontology_id=3) or [Uberon](http://uberon.github.io/about.html).
+### Cell Line, Tissue or Cell Type
+Cell line where the causal interaction is observed or, tissue or cell type where the causal interaction occurs. We recommend to use the [BRENDA](https://www.brenda-enzymes.org/ontology.php?ontology_id=3) ontology terms. However, the recommendations are still under discussion, see issue [#5](https://github.com/vtoure/MICAST/issues/5).
 
 
 
@@ -112,7 +109,6 @@ In this section, we provide tables summarising the list of terms necessary for t
 |----|----|----|
 | Species | NCBI Taxonomy | `9606` (*Homo sapiens*) |
 | Cell Type | BRENDA / Cellosaurus / CL | `BTO:0002733` (embryonic kidney cell line) |
-| Tissue Type | BRENDA / Uberon | `UBERON:0004819` (kidney epithelium) |
 
 
 ## Format
