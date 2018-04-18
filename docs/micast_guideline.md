@@ -5,14 +5,16 @@ The MICAST guideline describes the minimum information  that is necessary to dep
 This guideline targets curators and data providers interested in the representation of causality in molecular interactions and biological systems. 
 
 
-## Introduction to causality statements
+## Introduction to causal statements
 
-A causality statement is a binary directed interaction between two biological entities where the *source entity* regulates and has an influence on the activity or the quantity of the *target entity*. The *causal interaction* can be direct (without intermediates) or indirect (the causal impact of *source entity* is transmitted to the *target entity* by a third).
+A causal statement is a binary directed interaction between two biological entities where the *source entity* regulates and has an influence on the activity or the quantity of the *target entity*. The *causal interaction* can be direct (without intermediates) or indirect (the causal impact of *source entity* is transmitted to the *target entity* by a third).
 Consequently, a causal statement is composed of three type of elements: the *source entity*, the *causal interaction* and the *target entity*. 
+
+![Causal statement](https://github.com/vtoure/MICAST/images/causalStatement.svg)
 
 In MICAST, we define the object __Entity__ for representing the source and target entities, and the object __Causal Interaction__ for representing the causal interaction. 
 
-Furthermore, the challenge of representing causality statements relies on capturing enough contextual information about the elements that compose the causality statement. The context is important to define boundaries under which a specific causal statement is true. We would like to define this as a __Context__ object.
+Furthermore, the challenge of representing causal statements relies on capturing enough contextual information about the elements that compose the causal statement. The context is important to define boundaries under which a specific causal statement is true. We would like to define this as a __Context__ object.
 
 
 Each object can contain a certain number of mandatory terms that will be clarified below. For each term, recommendations of ontologies to use to depict the data are suggested. We strongly advise to follow the recommendations.
@@ -51,7 +53,7 @@ The molecular function that is involved in the causal interaction. To be discuss
 
 
 ## Defining __Causal Interaction__ objects
-The __Causal Interaction__ object is the core element of a causality statement. In MICAST, we consider the following terms mandatory to be defined for representing a __Causal Interaction__: Regulation, Mechanism, Localisation, Evidence, Reference.
+The __Causal Interaction__ object is the core element of a causal statement. In MICAST, we consider the following terms mandatory to be defined for representing a __Causal Interaction__: Regulation, Mechanism, Localisation, Evidence, Reference.
 
 ### Regulation 
 The type of regulation exerced by the source entity upon the target entity. Recommendation to come.
@@ -66,7 +68,7 @@ Description of the localisation of the causal interaction. The causal interactio
 The Evidence is a proof of the existence of the causal interaction (e.g, experimental technique, literature curation, computational method, etc). We recommend to use the [Evidence & Conclusion Ontology](http://www.evidenceontology.org/)
 
 ### Reference
-Publication identifier in which the causality statement has been highlighted. We recommend to provide the pubmed ID. It could also be a list of references, in that case, separate the different pubmed IDs with a vertical bar "|".
+Publication identifier in which the causal statement has been highlighted. We recommend to provide the pubmed ID. It could also be a list of references, in that case, separate the different pubmed IDs with a vertical bar "|".
 
 ### Text
 Free text field that should contain the exact sentence from the reference where the causal interaction is mentionned. 
@@ -112,10 +114,10 @@ In this section, we provide tables summarising the list of terms necessary for t
 
 
 ## Format
-In this section, we will provide a list of formats that follows the MICAST guidelines to represent causality statements.
+In this section, we will provide a list of formats that follows the MICAST guidelines to represent causal statements.
  
 ## Examples
-Concrete example of causality statements. 
+Concrete example of causal statements. 
 
 ## Contributors
 Vasundra Touré ([vasundra.toure@ntnu.no](mailto:vasundra.toure@ntnu.no))
