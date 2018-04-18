@@ -10,7 +10,7 @@ This guideline targets curators and data providers interested in the representat
 A causal statement is a binary directed interaction between two biological entities where the *source entity* regulates and has an influence on the activity or the quantity of the *target entity*. The *causal interaction* can be direct (without intermediates) or indirect (the causal impact of *source entity* is transmitted to the *target entity* by a third).
 Consequently, a causal statement is composed of three type of elements: the *source entity*, the *causal interaction* and the *target entity*. 
 
-![Causal statement](https://github.com/vtoure/MICAST/images/causalStatement.svg)
+![Causal statement](https://github.com/vtoure/MICAST/tree/master/images/causalStatement.svg)
 
 In MICAST, we define the object __Entity__ for representing the source and target entities, and the object __Causal Interaction__ for representing the causal interaction. 
 
