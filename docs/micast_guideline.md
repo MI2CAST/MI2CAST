@@ -17,17 +17,17 @@ In MICAST, we define the object __Entity__ for representing the source and targe
 Furthermore, the challenge of representing causal statements relies on capturing enough contextual information about the elements that compose the causal statement. The context is important to define boundaries under which a specific causal statement is true. We would like to define this as a __Context__ object.
 
 
-Each object can contain a certain number of mandatory terms that will be clarified below. For each term, recommendations of ontologies to use to depict the data are suggested. We strongly advise to follow the recommendations.
+Each object can contain a certain number of mandatory terms that will be clarified below. For each term, recommendations of ontologies to use to depict the data are suggested. We strongly advise to follow the recommendations. We use the [RFC keywords](https://tools.ietf.org/html/rfc2119) (please see the link to understand the meaning of the keywords) to indicate the requirement levels: __MUST__ (absolute requirement of the specification),  __SHOULD__ (there may exist valid reasons in particular circumstances to ignore this item) and __SHOULD NOT__ (not recommended but there can be a valid reason in particular circumstances to have it).
 
 
 ## Defining __Entity__ objects 
-The __Entity__ object can either be a source (the regulator) or a target (the regulated). The nature (source or target) of the entity should be explicit. In MICAST, we consider the following terms mandatory to be defined for representing an __Entity__: Identifier, Name, Type, Activity.
+The __Entity__ object can either be a source (the regulator) or a target (the regulated). The nature (source or target) of the entity has to be be explicit. In MICAST, we consider the following terms to be defined for representing an __Entity__: Identifier, Name, Type, Activity.
 
-### Identifier
+### Identifier (MUST)
 Unique identification number represented as follow: *databaseName:identifier*. For example: `uniprotkb:A12345`
 
 We recommend to use different ontologies depending on the type of the biological entity:
-* Gene: [ensembl gene ID](http://www.ensembl.org), [ncbi gene ID](https://www.ncbi.nlm.nih.gov/gene)
+* Gene: [ensembl gene ID](http://www.ensembl.org), [Entrez gene ID](https://www.ncbi.nlm.nih.gov/gene)
 * RNA (non coding): [rna central ID](http://rnacentral.org/)
 * mRNA: 
   * Recommended: [ensembl transcript ID](http://www.ensembl.org)
@@ -41,49 +41,49 @@ We recommend to use different ontologies depending on the type of the biological
 * Phenotype: [gene ontology ID](http://www.geneontology.org/)
 * Stimulus: To be discussed, see issue [#2](https://github.com/vtoure/MICAST/issues/2).
 
-### Name 
+### Name (SHOULD)
 String representing the given name/alias of the entity. This could be used for visualisation purposes.
 
-### Type
+### Type (SHOULD)
 The biological type of the entity involved (e.g, gene, RNA, mRNA, protein, chemical, phenotype, etc). We recommend to use the [Molecular Interaction Controlled Vocabulary](https://www.ebi.ac.uk/ols/ontologies/mi), specifically the branches [causal interactor type](https://www.ebi.ac.uk/ols/ontologies/mi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FMI_2259) and [interactor type](https://www.ebi.ac.uk/ols/ontologies/mi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FMI_0313)
 
-### Activity
+### Activity (SHOULD)
 The molecular function that is involved in the causal interaction. To be discussed, see issue [#3](https://github.com/vtoure/MICAST/issues/3).
 
 
 
 ## Defining __Causal Interaction__ objects
-The __Causal Interaction__ object is the core element of a causal statement. In MICAST, we consider the following terms mandatory to be defined for representing a __Causal Interaction__: Regulation, Mechanism, Localisation, Evidence, Reference.
+The __Causal Interaction__ object is the core element of a causal statement. In MICAST, we consider the following terms to be defined for representing a __Causal Interaction__: Regulation, Mechanism, Localisation, Evidence, Reference.
 
-### Regulation 
+### Regulation (MUST)
 The type of regulation exerced by the source entity upon the target entity. Recommendation to come.
 
-### Mechanism
+### Mechanism (MUST)
 The modification that happens to the target __Entity__ (e.g, phosphorylation, binding, etc).  We recommend to use the [Molecular Interaction Controlled Vocabulary](https://www.ebi.ac.uk/ols/ontologies/mi), branch [causal interaction](https://www.ebi.ac.uk/ols/ontologies/mi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FMI_2233) or branch [interaction type](https://www.ebi.ac.uk/ols/ontologies/mi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FMI_0190).
 
-### Localisation 
+### Localisation (MUST)
 Description of the localisation of the causal interaction. The causal interaction can occur inside a cell or between two cells. We recommend to use the [Gene Ontology Cellular Component](http://geneontology.org/) (GO:CC). Alternatively it could also be represented with a combination of GO:CC and the host organism (Species)/Cell Type (to be further developed).
 
-### Evidence
+### Evidence (MUST)
 The Evidence is a proof of the existence of the causal interaction (e.g, experimental technique, literature curation, computational method, etc). We recommend to use the [Evidence & Conclusion Ontology](http://www.evidenceontology.org/)
 
-### Reference
+### Reference (SHOULD)
 Publication identifier in which the causal statement has been highlighted. We recommend to provide the pubmed ID. It could also be a list of references, in that case, separate the different pubmed IDs with a vertical bar "|".
 
-### Text
+### Text (SHOULD NOT)
 Free text field that should contain the exact sentence from the reference where the causal interaction is mentionned. 
 
 
 
 ## Defining __Context__ objects
 
-### Species
+### Species (MUST)
 Type of species where the causal interaction is observed. We recommend to use the [Taxonomy ID](https://www.ncbi.nlm.nih.gov/taxonomy) from NCBI. For example: `9606` for *Homo sapiens*.
 
-### Cell Line, Tissue or Cell Type
+### Cell Line, Tissue or Cell Type (SHOULD)
 Cell line where the causal interaction is observed or, tissue or cell type where the causal interaction occurs. We recommend to use the [BRENDA](https://www.brenda-enzymes.org/ontology.php?ontology_id=3) ontology terms. However, the recommendations are still under discussion, see issue [#5](https://github.com/vtoure/MICAST/issues/5).
 
-
+### 
 
 ## Summary
 In this section, we provide tables summarising the list of terms necessary for the three objects defined above, along with an example for each term.
