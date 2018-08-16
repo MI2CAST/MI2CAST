@@ -34,10 +34,10 @@ We recommend to use different ontologies depending on the type of the biological
   * Otherwise: [ensembl gene ID](http://www.ensembl.org)
 * Protein: [uniprot ID](http://www.uniprot.org/)
 * Chemical: [chebi ID](https://www.ebi.ac.uk/chebi/)
-* Family: list of strings of [uniprot IDs](http://www.uniprot.org/) (separate each string with a vertical bar "__|__", for example: `A12345|B23456|C34567`)
+* Family: list of strings of IDs following the rules (for a family gene, use ensembl gene ID or Entrez gene ID, for a protein family, use uniprot IDs, etc). Separate each string with a vertical bar "__|__", for example: `A12345|B23456|C34567`
 * Complex:
   * For stable complex: [complexportal ID](https://www.ebi.ac.uk/complexportal/home)
-  * For transient complex: list of strings of [uniprot](http://www.uniprot.org/) or [chebi](https://www.ebi.ac.uk/chebi/) IDs in alphanumerical order (separate each string with a vertical bar "__|__") 
+  * For transient complex: list of strings of [uniprot](http://www.uniprot.org/) or [chebi](https://www.ebi.ac.uk/chebi/) IDs in alphanumerical order. Separate each string with a vertical bar "__|__" 
 * Phenotype: [gene ontology ID](http://www.geneontology.org/)
 * Stimulus: To be discussed, see issue [#2](https://github.com/vtoure/MICAST/issues/2).
 
@@ -48,21 +48,24 @@ String representing the given name/alias of the entity. This could be used for v
 The biological type of the entity involved (e.g, gene, RNA, mRNA, protein, chemical, phenotype, etc). We recommend to use the [Molecular Interaction Controlled Vocabulary](https://www.ebi.ac.uk/ols/ontologies/mi), specifically the branches [causal interactor type](https://www.ebi.ac.uk/ols/ontologies/mi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FMI_2259) and [interactor type](https://www.ebi.ac.uk/ols/ontologies/mi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FMI_0313)
 
 ### Activity (SHOULD)
-The molecular function that is involved in the causal interaction. To be discussed, see issue [#3](https://github.com/vtoure/MICAST/issues/3).
+The molecular function that is involved in the causal interaction: meaning the function of the entity that causes the regulation or that is regulated. We recommend using the [Gene Ontology Molecular Function](http://geneontology.org/) (GO:MF). To be further discussed, see issue [#3](https://github.com/vtoure/MICAST/issues/3).
 
 
 
 ## Defining __Causal Interaction__ objects
 The __Causal Interaction__ object is the core element of a causal statement. In MICAST, we consider the following terms to be defined for representing a __Causal Interaction__: Regulation, Mechanism, Localisation, Evidence, Reference.
 
+### Source (MUST)
+The source is the regulator entity of the causal interaction. The source Entity must be specified (use the [Identifier](###-Identifier-(MUST))).
+
+### Target (MUST)
+The target is the regulated entity of the causal interaction. The target Entity must be specified (use the [Identifier](###-Identifier-(MUST))).
+
 ### Regulation (MUST)
-The type of regulation exerced by the source entity upon the target entity. Recommendation to come.
+The type of regulation exerced by the source entity upon the target entity. Currently two controlled vocabularies/ontologies can represent this: [Molecular Interaction](https://www.ebi.ac.uk/ols/ontologies/mi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FMI_2234) and [Relation Ontology](https://www.ebi.ac.uk/ols/ontologies/ro/properties?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FRO_0002506). Recommendation on which one to use to come.
 
 ### Mechanism (MUST)
 The modification that happens to the target __Entity__ (e.g, phosphorylation, binding, etc).  We recommend to use the [Molecular Interaction Controlled Vocabulary](https://www.ebi.ac.uk/ols/ontologies/mi), branch [causal interaction](https://www.ebi.ac.uk/ols/ontologies/mi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FMI_2233) or branch [interaction type](https://www.ebi.ac.uk/ols/ontologies/mi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FMI_0190).
-
-### Localisation (MUST)
-Description of the localisation of the causal interaction. The causal interaction can occur inside a cell or between two cells. We recommend to use the [Gene Ontology Cellular Component](http://geneontology.org/) (GO:CC). Alternatively it could also be represented with a combination of GO:CC and the host organism (Species)/Cell Type (to be further developed).
 
 ### Evidence (MUST)
 The Evidence is a proof of the existence of the causal interaction (e.g, experimental technique, literature curation, computational method, etc). We recommend to use the [Evidence & Conclusion Ontology](http://www.evidenceontology.org/)
@@ -77,13 +80,24 @@ Free text field that should contain the exact sentence from the reference where 
 
 ## Defining __Context__ objects
 
+### Localisation (MUST)
+Description of the localisation of the causal interaction: where does the regulation happens? The causal interaction can occur inside a cell or between two cells. We recommend to use the [Gene Ontology Cellular Component](http://geneontology.org/) (GO:CC). Alternatively it could also be represented with a combination of GO:CC and the host organism (Species)/Cell Type (to be further developed).
+
 ### Species (MUST)
 Type of species where the causal interaction is observed. We recommend to use the [Taxonomy ID](https://www.ncbi.nlm.nih.gov/taxonomy) from NCBI. For example: `9606` for *Homo sapiens*.
 
 ### Cell Line, Tissue or Cell Type (SHOULD)
 Cell line where the causal interaction is observed or, tissue or cell type where the causal interaction occurs. We recommend to use the [BRENDA](https://www.brenda-enzymes.org/ontology.php?ontology_id=3) ontology terms. However, the recommendations are still under discussion, see issue [#5](https://github.com/vtoure/MICAST/issues/5).
 
-### 
+#### Sex (SHOULD)
+If the term above (Cell Line, Tissue or Cell Type) is given, when possible, provide the information on the sex: __male__ or __female__. This can be used as a filtering information: there may be a difference in the regulations observed between male and female cells/tissues. 
+
+### Concentration (SHOULD)
+If the concentration plays a role in the causal statement, it should be annotated. For example, only a high amount of the source is capable of down-regulating the quantity of the target. We currently recommend to use the following terms: __high__, __low__, __dose-dependent__. Suggestions are welcome for a more formal representation, see issue [#6](https://github.com/vtoure/MICAST/issues/6).   
+
+### State (SHOULD)
+State of the source or the target necessary for the causal regulation to occur (e.g, the source should be phosphorylated at position XXX to up-regulate the kinase activity of the target). Recommendation to come.
+
 
 ## Summary
 In this section, we provide tables summarising the list of terms necessary for the three objects defined above, along with an example for each term.
@@ -95,13 +109,15 @@ In this section, we provide tables summarising the list of terms necessary for t
 | Identifier | type dependent | `uniprotkb:P31749` |
 | Name | free text | `AKT1` |
 | Type | MI | `MI:0326` (protein)|
+| Activity | `GO:0016301` (kinase activity) |
 
 ### Summary of terms used for Causal Interaction
 | Term | Ontology | Example (Meaning) |
 |---|---|---|
+| Source | `Q969V5` |
+| Target | `P31749` |
 | Regulation | ? | ? |
 | Mechanism | MI | `MI:0220` (ubiquitination reaction) |
-| Localisation | GO:CC | `GO:0005829` (cytosol) |
 | Evidence | ECO | `ECO:0001089` (in vivo ubiquitination assay evidence) |
 | Reference | Pubmed | `22410793` |
 | Text | free text | `the degradation of Akt by MULAN suppresses cell proliferation and viability.` |
@@ -109,8 +125,11 @@ In this section, we provide tables summarising the list of terms necessary for t
 ### Summary of terms used for Context
 | Term | Ontology | Example (meaning) |
 |----|----|----|
+| Localisation | GO:CC | `GO:0005829` (cytosol) |
 | Species | NCBI Taxonomy | `9606` (*Homo sapiens*) |
 | Cell Type | BRENDA / Cellosaurus / CL | `BTO:0002733` (embryonic kidney cell line) |
+| Sex | `male` |
+| Concentration | `dose-dependent` |
 
 
 ## Format
