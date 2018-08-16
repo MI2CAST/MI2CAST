@@ -109,13 +109,13 @@ In this section, we provide tables summarising the list of terms necessary for t
 | Identifier | type dependent | `uniprotkb:P31749` |
 | Name | free text | `AKT1` |
 | Type | MI | `MI:0326` (protein)|
-| Activity | `GO:0016301` (kinase activity) |
+| Activity | GO:MF | `GO:0016301` (kinase activity) |
 
 ### Summary of terms used for Causal Interaction
 | Term | Ontology | Example (Meaning) |
 |---|---|---|
-| Source | `Q969V5` |
-| Target | `P31749` |
+| Source | Identifier | `Q969V5` |
+| Target | Identifier | `P31749` |
 | Regulation | ? | ? |
 | Mechanism | MI | `MI:0220` (ubiquitination reaction) |
 | Evidence | ECO | `ECO:0001089` (in vivo ubiquitination assay evidence) |
@@ -128,8 +128,8 @@ In this section, we provide tables summarising the list of terms necessary for t
 | Localisation | GO:CC | `GO:0005829` (cytosol) |
 | Species | NCBI Taxonomy | `9606` (*Homo sapiens*) |
 | Cell Type | BRENDA / Cellosaurus / CL | `BTO:0002733` (embryonic kidney cell line) |
-| Sex | `male` |
-| Concentration | `dose-dependent` |
+| Sex | - | `male` |
+| Concentration | - | `dose-dependent` |
 
 
 ## Format
