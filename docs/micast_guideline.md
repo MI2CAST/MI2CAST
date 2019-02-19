@@ -114,7 +114,6 @@ In this section, we provide tables summarising the list of terms necessary for t
 | Mechanism | MI | `MI:0220` (ubiquitination reaction) |
 | Evidence | ECO | `ECO:0001089` (in vivo ubiquitination assay evidence) |
 | Reference | Pubmed | `22410793` |
-| Text | free text | `the degradation of Akt by MULAN suppresses cell proliferation and viability.` |
 
 ### Summary of terms used for Context
 | Term | Ontology | Example (meaning) |
