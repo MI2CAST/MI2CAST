@@ -1,7 +1,7 @@
 # MICAST
-Minimum Information about a Causal Statement - Repository defining mandatory concepts to depict causal statements in Systems Biology
+Minimum Information about a Causal Statement - Repository defining concepts to depict causal statements in Systems and Molecular Biology
 
 ## Introduction
-A causal statement is a binary interaction between two biological entities (gene, protein, etc) where the source entity regulates the activity of the target entity.
+A causal statement is defined as an interaction between biological entities (gene, protein, etc) where a source entity regulates the activity of the target entity.
 
-This repository is a community effort to homogeneise the representation of causal statements by setting up mandatory terms to provide and suggesting ontologies to use for each term.
+This repository is a community effort to homogeneise and categorise information to depict when it comes to causal statements. We define terms and ontologies are suggested for each term.
