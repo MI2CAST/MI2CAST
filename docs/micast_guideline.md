@@ -1,13 +1,10 @@
 # Formalising the representation of Causal Statements
-<div style="text-align: justify">
 The MICAST (Minimum Information about a Causal Statement) guideline describes information that are necessary to depict causal interactions in molecular biology. The aim is to homogeneise their representation for a better usability and understanding, by making the data “FAIR” (Findable, Accessible, Interoperable and Reproducible). 
 
 This guideline targets curators and data providers of causality in molecular interactions and biological systems, but also tool developers, text miners to know what type of information can be expected when dealing with causal statements.
-</div>
+
 
 ## Introduction to causal statements
-
-<div style="text-align: justify">
 A causal statement is a directed interaction between biological entities where a *source entity* (regulator) regulates and has an influence on the activity or the quantity of a *target entity* (regulated entity). The *causal interaction* can be direct (without intermediates) or indirect (the causal impact of *source entity* is transmitted to the *target entity* by a third).
 
 The core of a causal statement is composed of three type of elements: the *source entity*, the *causal interaction* (representing the regulation) and the *target entity*. 
@@ -17,7 +14,7 @@ The core of a causal statement is composed of three type of elements: the *sourc
 </p>
 
 Furthermore, one big challenge relies on capturing enough contextual information to gradually enrich a causal statement and define boundaries under which it is true. This type of information may be diffuse and difficult to curate. With this guideline, we hope to formalise the depiction of that metadata in order to obtain contextualised causal statements that can be used for many applications in systems biology and systems medicine.
-</div>
+
 
 ## The information content of MICAST
 The contextual information in MICAST is split and categorized into different levels of requirement.
@@ -25,7 +22,7 @@ The contextual information in MICAST is split and categorized into different lev
 Four levels are defined:
 - CAUSALITY reflects the core of a causal statement showing the causality, the mandatory layer of information
 - CONDITION reflects the constraints under which the causal statement is applied or has been observed
-- QUALITY provides details about the assessment of the causal statement
+- CONFIDENCE provides details about the assessment of the causal statement
 - SUPPORTING DATA indicate additional information that provides mechanistic details.
 
 Each level defines specific terms that will be detailed in the sections below. For each term, recommendations on ontologies and controlled vocabularies to use are suggested. We strongly advise to follow the recommendations.
@@ -84,11 +81,6 @@ A source or target __Entity__ can be represented by a specific experimental setu
 
 Ontology recommendation: [Molecular Interaction Controlled Vocabulary](https://www.ebi.ac.uk/ols/ontologies/mi) - branch [experimental preparation](https://www.ebi.ac.uk/ols/ontologies/mi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FMI_0346). Experimental preparation is a child term of __Entity__.
 
-## Experiment type (SHOULD)
-The __Causal Statement__ can be assessed from a particular experiment type. Experiment type is a child term of __Causal Statement__.
-
-Ontology recommendation: [Evidence & Conclusion Ontology](http://www.evidenceontology.org/).
-
 ### Species (SHOULD)
 Type of species where the __Causal Statement__ is observed. 
 Species can also refer to the type of species of the source or target __Entity__ to distinguish causality assessed with entities from different species. In some cases, the species information is implicitly defined in the Entity's identifier. Species is a child term of __Causal Statement__ and __Entity__.
@@ -110,8 +102,8 @@ Description of the cellular localisation of the __Causal Statement__. The causal
 Ontology recommendation:  [Gene Ontology Cellular Component](http://geneontology.org/) (GO:CC).
 
 
-## QUALITY
-The quality level provides information about the assessment and the provenance of the __Causal Statement__: In which publication this causal relationship has been found? What the causal interaction manually curated or automatically generated?
+## CONFIDENCE
+The confidence level provides information about the assessment and the provenance of the __Causal Statement__: In which publication this causal relationship has been found? What the causal interaction manually curated or automatically generated?
 This provides some criteria to rank the trust in the annotated causal statement.
 
 ### Evidence (MUST)
@@ -120,10 +112,15 @@ The Evidence states how the existence of the __Causal Statement__ has been prove
 Ontology recommendation:  [Evidence & Conclusion Ontology](http://www.evidenceontology.org/)
 
 ### Reference (SHOULD)
-Publication identifier in which the causal statement has been highlighted. This is a quality assessment term. We recommend to provide the pubmed ID. It could also be a list of references, in that case, separate the different pubmed IDs with a vertical bar "|". Reference is a child term of __Causal Statement__.
+Publication identifier in which the causal statement has been highlighted. We recommend to provide the pubmed ID. It could also be a list of references, in that case, separate the different pubmed IDs with a vertical bar "|". Reference is a child term of __Causal Statement__.
 
 Ontology recommendation: [PubMed ID](https://www.ncbi.nlm.nih.gov/pmc/pmctopmid/)
 
+
+## Experiment (SHOULD)
+The __Causal Statement__ can be assessed from a particular experiment type. Experiment type is a child term of __Causal Statement__.
+
+Ontology recommendation: [Evidence & Conclusion Ontology](http://www.evidenceontology.org/).
 
 ## SUPPORTING DATA
 The supporting data represent mechanistic details about the __Causal Statement__. Two terms are suggested: Activity and Mechanism. 
@@ -151,7 +148,4 @@ The following graph provides an overview of the list of terms by highlighting th
 ## MICAST Supports
 In this section, we will provide a list of formats or tools that support the MICAST guidelines to represent causal statements.
 
-
-## Contributors
-Vasundra Touré ([vasundra.toure@ntnu.no](mailto:vasundra.toure@ntnu.no))
 

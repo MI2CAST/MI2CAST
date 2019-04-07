@@ -14,7 +14,7 @@ Go to the [MICAST guideline](docs/micast_guideline.md).
 ## Examples
 (under development)
 
-## Authors 
-Vasundra Touré
+## Contributors 
+Vasundra Touré ([vasundra.toure@ntnu.no](mailto:vasundra.toure@ntnu.no))
 
 (more to be added...)
