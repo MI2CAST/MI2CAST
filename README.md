@@ -9,7 +9,7 @@ A causal statement is defined as an interaction between biological material enti
 This repository is a community effort to homogeneise and categorise information to depict about causal relationships. We define terms and ontologies are suggested for each term.
 
 ## Documentation
-Go to the [MI2CAST guideline](docs/micast_guideline.md).
+Go to the [MI2CAST guideline](docs/MI2CAST_guideline.md).
 
 ## Examples
 (under development)
