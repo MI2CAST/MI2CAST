@@ -20,8 +20,8 @@ Furthermore, one big challenge relies on capturing enough contextual information
 MI2CAST defines four main rules to be followed when annotating a molecular interaction causal statement:
 - Rule 1: The source and target entities of a causal interaction must be specified
 - Rule 2: The regulation sign of a causal interaction must be specified
-- Rule 3: The available context about a causal interaction must be specified
-- Rule 4: The quality of a causal interaction must be specified
+- Rule 3: The quality of a causal interaction should be specified
+- Rule 4: The available context about a causal interaction should be specified
 
 In addition to the rules, specific terms are advised to be annotated when the data is available. For each term, recommendations on ontologies and controlled vocabularies to use are suggested. We strongly advise to follow the recommendations.
 
@@ -35,9 +35,11 @@ We recommend to use different ontologies depending on the type of the biological
 * RNA (non coding): [rna central ID](http://rnacentral.org/)
 * mRNA: 
   * Recommended: [ensembl transcript ID](http://www.ensembl.org)
-  * Otherwise: [ensembl gene ID](http://www.ensembl.org)
+  * Alternative: [ensembl gene ID](http://www.ensembl.org)
 * Protein: [uniprot ID](http://www.uniprot.org/)
-* Chemical: [chebi ID](https://www.ebi.ac.uk/chebi/)
+* Chemical: 
+  * Recommended: [chebi ID](https://www.ebi.ac.uk/chebi/)
+  * Alternative: [pubchem ID](https://pubchem.ncbi.nlm.nih.gov/)
 * Family: list of string of IDs following the rules (for a family of genes, use ensembl gene ID or Entrez gene ID, for a family of proteins, use uniprot IDs, etc).
 * Complex:
   * For stable complex: [complexportal ID](https://www.ebi.ac.uk/complexportal/home)
@@ -53,23 +55,23 @@ Ontology recommendation:
 * [Relation Ontology](https://www.ebi.ac.uk/ols/ontologies/ro/properties?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FRO_0002506).
 
 
+### Quality
+The confidence level provides information about the assessment and the provenance of the causal statement: In which publication this causal relationship has been found? What the causal interaction manually curated or automatically generated?
+This provides some criteria to rank a causal statement.
+
+#### Reference
+Publication or combination of publications that led to the creation of a causal interaction.
+
+Ontology recommendation: [PubMed ID](https://www.ncbi.nlm.nih.gov/pmc/pmctopmid/).
+
+#### The evidence
+How does the causal statement has been annotated (e.g., experimental procedure, literature curation, computational inference, etc)? This information helps the user of the data to know how to trust this causal statement.
+
+Ontology recommendation:  [Evidence & Conclusion Ontology](http://www.evidenceontology.org/)
+
+
 ### CONTEXT
 The context informs about necessary circumstances under which a causal statement has been observed or proven to be true.
-
-#### Biological state
-Information about the biological state of the source or the target entity necessary for the causal regulation to occur (e.g., the source should be phosphorylated at residue XXX in position YYY to up-regulate the target).
-
-#### Experimental setup
-A source or target entity can be represented by a specific experimental setup which could explain the causal character of the causal statement. For example, an overexpression of a gene.
-
-Ontology recommendation: 
-* [Molecular Interaction Controlled Vocabulary](https://www.ebi.ac.uk/ols/ontologies/mi) - branch [experimental preparation](https://www.ebi.ac.uk/ols/ontologies/mi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FMI_0346)
-* [Evidence & Conclusion Ontology](http://www.evidenceontology.org/).
-
-#### Biological type
-The biological type of the entity involved (e.g., gene, protein, chemical, complex, family, etc). This is mainly used to annotate transient complexes and families to distinguish them or when the annotated entity's identifier does not fit with the intended biological type of the entity.
-
-Ontology recommendation: [Molecular Interaction Controlled Vocabulary](https://www.ebi.ac.uk/ols/ontologies/mi) - branch  [interactor type](https://www.ebi.ac.uk/ols/ontologies/mi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FMI_0313).
 
 ### Biological activity or mechanism
 The molecular function of the entity, meaning the function of the entity that causes the regulation or that is regulated (e.g., kinase activity). Otherwise, the mechanism of the causal statement that constitutes the biological effect on the target entity (e.g., phosphorylation, binding, etc).
@@ -81,10 +83,22 @@ Ontology recommendation:
 
 To be further discussed, see issue [#3](https://github.com/vtoure/MICAST/issues/3).
 
+#### Biological type
+The biological type of the entity involved (e.g., gene, protein, chemical, complex, family, etc).
 
-#### Species
-Type of species where the causal regulation is observed. 
-Species can also refer to the type of species of the source or target entity to distinguish causality assessed with entities from different species. In some cases, the species information is implicitly defined in the Entity's identifier. 
+Ontology recommendation: [Molecular Interaction Controlled Vocabulary](https://www.ebi.ac.uk/ols/ontologies/mi) - branch  [interactor type](https://www.ebi.ac.uk/ols/ontologies/mi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FMI_0313).
+
+#### Biological modification
+Information about the modification of the source or the target entity necessary for the causal regulation to occur (e.g., the source should be phosphorylated at residue XXX in position YYY to up-regulate the target).
+
+#### Compartment
+The cellular localization of the entities or the causal regulation. The causal interaction can occur inside a cell or between two cells. 
+
+Ontology recommendation:  [Gene Ontology Cellular Component](http://geneontology.org/) (GO:CC).
+
+#### Taxon
+Type of taxon where the causal regulation is observed. 
+Taxon can also refer to the organism of the source or target entity to distinguish causality assessed with entities from different taxons. In some cases, the taxon information is implicitly defined in the Entity's identifier. 
 
 Ontology recommendation: [Taxonomy ID](https://www.ncbi.nlm.nih.gov/taxonomy) from NCBI.
 
@@ -97,32 +111,13 @@ Ontology recommendation:
 * [Uberon](http://uberon.github.io/) 
 See discussions  [#5](https://github.com/vtoure/MICAST/issues/5).
 
-#### Compartment
-The cellular localization of the entities or the causal regulation. The causal interaction can occur inside a cell or between two cells. 
 
-Ontology recommendation:  [Gene Ontology Cellular Component](http://geneontology.org/) (GO:CC).
+#### Experimental setup
+A source or target entity can be represented by a specific experimental setup which could explain the causal character of the causal statement. For example, an overexpression of a gene.
 
-
-### Quality
-The confidence level provides information about the assessment and the provenance of the causal statement: In which publication this causal relationship has been found? What the causal interaction manually curated or automatically generated?
-This provides some criteria to rank a causal statement.
-
-#### The basis of assertion
-How does the causal statement has been annotated (e.g., experimental technique, literature curation, computational inference, etc)? This information helps the user of the data to know how to trust this causal statement.
-
-Ontology recommendation:  [Evidence & Conclusion Ontology](http://www.evidenceontology.org/)
-
-#### Reference
-Publication or combination of publications that led to the creation of a causal interaction.
-
-Ontology recommendation: [PubMed ID](https://www.ncbi.nlm.nih.gov/pmc/pmctopmid/).
-
-
-### Experimental evidence
-The causal statement can be observed in one or several experiments.
-
-Ontology recommendation: [Evidence & Conclusion Ontology](http://www.evidenceontology.org/).
-
+Ontology recommendation: 
+* [Molecular Interaction Controlled Vocabulary](https://www.ebi.ac.uk/ols/ontologies/mi) - branch [experimental preparation](https://www.ebi.ac.uk/ols/ontologies/mi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FMI_0346)
+* [Evidence & Conclusion Ontology](http://www.evidenceontology.org/).
 
 ## Summary
 The following graph provides an overview of the list of terms requested to be checked in MI2CAST.
