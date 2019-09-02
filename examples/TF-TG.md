@@ -1,4 +1,4 @@
-#  Example o ftranscription factor target gene causal statement
+#  Example of transcription factor target gene causal statement
 
 This example of genetic regulation is based on the following paper: "[Characterization of E2F8, a novel E2F-like cell-cycle regulated repressor of E2F-activated transcription](https://doi.org/10.1093/nar/gki855)" by Christensen et al. (2005) . It describes the causal interaction between a transcription factor E2F8 that represses the transcription of the CCNE1 gene:
 
