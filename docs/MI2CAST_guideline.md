@@ -125,7 +125,7 @@ Ontology recommendation:
 * [Evidence & Conclusion Ontology](http://www.evidenceontology.org/).
 
 ## Summary
-The following graph provides an overview of the list of terms requested to be checked in MI2CAST.
+The following graph provides an overview of the list of terms requested to be checked in MI2CAST:
 
 <p align="center">
   <img src="https://github.com/vtoure/MI2CAST/blob/master/images/mi2cast.svg" alt="MI2CAST terms"/>
