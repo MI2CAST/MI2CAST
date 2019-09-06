@@ -73,7 +73,7 @@ Ontology recommendation:  [Evidence & Conclusion Ontology](http://www.evidenceon
 ### CONTEXT
 The context informs about necessary circumstances under which a causal statement has been observed or proven to be true.
 
-### Biological activity or mechanism
+#### Biological activity or mechanism
 The molecular function of the entity, meaning the function of the entity that causes the regulation or that is regulated (e.g., kinase activity). Otherwise, the mechanism of the causal statement that constitutes the biological effect on the target entity (e.g., phosphorylation, binding, etc).
 
 Ontology recommendation: 
@@ -81,7 +81,6 @@ Ontology recommendation:
 * [Molecular Interaction Controlled Vocabulary](https://www.ebi.ac.uk/ols/ontologies/mi) - branch [causal interaction](https://www.ebi.ac.uk/ols/ontologies/mi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FMI_2233) for the biological mechanism,
 * [Molecular Interaction Controlled Vocabulary](https://www.ebi.ac.uk/ols/ontologies/mi) - branch [interaction type](https://www.ebi.ac.uk/ols/ontologies/mi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FMI_0190) for the biological mechanism.
 
-To be further discussed, see issue [#3](https://github.com/vtoure/MICAST/issues/3).
 
 #### Biological type
 The biological type of the entity involved (e.g., gene, protein, chemical, complex, family, etc).
@@ -90,6 +89,12 @@ Ontology recommendation: [Molecular Interaction Controlled Vocabulary](https://w
 
 #### Biological modification
 Information about the modification of the source or the target entity necessary for the causal regulation to occur (e.g., the source should be phosphorylated at residue XXX in position YYY to up-regulate the target).
+For proteins we recommend to annotate:
+* the modification type (e.g., phosphorylation of a protein, methylation of a gene or RNA) for which we recommend using [PSI-MOD](https://www.ebi.ac.uk/ols/ontologies/mod) for proteins , the [SO](http://www.sequenceontology.org/) for genes
+* the modified residue, if known, using [ChEBI](https://www.ebi.ac.uk/chebi/)
+* the position of the modification with a number indicating which residue is modified, if known
+ 
+
 
 #### Compartment
 The cellular localization of the entities or the causal regulation. The causal interaction can occur inside a cell or between two cells. 
@@ -121,6 +126,11 @@ Ontology recommendation:
 
 ## Summary
 The following graph provides an overview of the list of terms requested to be checked in MI2CAST.
+
+<p align="center">
+  <img src="https://github.com/vtoure/MI2CAST/blob/master/images/mi2cast.svg" alt="MI2CAST terms"/>
+</p>
+
 
 
 ## MI2CAST Supports
