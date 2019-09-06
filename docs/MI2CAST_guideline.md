@@ -136,9 +136,9 @@ The following graph provides an overview of the list of terms requested to be ch
 ## MI2CAST Supports
 In this section, we will provide a list of formats or tools that support the MI2CAST guidelines to represent causal statements.
 
-### The causalBuilder
+### causalBuilder
 
-Interface for the curation of causal statements
+Interface for the curation of causal statements  
 causalBuilder website: [https://vtoure.github.io/causalBuilder/](https://vtoure.github.io/causalBuilder/)
 
 
