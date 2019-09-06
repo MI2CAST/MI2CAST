@@ -89,7 +89,7 @@ Ontology recommendation: [Molecular Interaction Controlled Vocabulary](https://w
 
 #### Biological modification
 Information about the modification of the source or the target entity necessary for the causal regulation to occur (e.g., the source should be phosphorylated at residue XXX in position YYY to up-regulate the target).
-For proteins we recommend to annotate:
+We recommend to annotate:
 * the modification type (e.g., phosphorylation of a protein, methylation of a gene or RNA) for which we recommend using [PSI-MOD](https://www.ebi.ac.uk/ols/ontologies/mod) for proteins , the [SO](http://www.sequenceontology.org/) for genes
 * the modified residue, if known, using [ChEBI](https://www.ebi.ac.uk/chebi/)
 * the position of the modification with a number indicating which residue is modified, if known
@@ -135,5 +135,10 @@ The following graph provides an overview of the list of terms requested to be ch
 
 ## MI2CAST Supports
 In this section, we will provide a list of formats or tools that support the MI2CAST guidelines to represent causal statements.
+
+### The causalBuilder
+
+Interface for the curation of causal statements
+causalBuilder website: [https://vtoure.github.io/causalBuilder/](https://vtoure.github.io/causalBuilder/)
 
 
