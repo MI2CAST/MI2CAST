@@ -12,7 +12,8 @@ This repository is a community effort to homogeneise and categorise information 
 Go to the [MI2CAST guideline](docs/MI2CAST_guideline.md).
 
 ## Examples
-(under development)
+* [E2F8 (transcription factor) regulation of CCNE1 (target gene) causal statement](examples/TF-TG.md),
+* [Protein kinase A catalytic subunit regulation](examples/PKA_regulation.md)
 
 ## Contributors 
 Vasundra Touré ([vasundra.toure@ntnu.no](mailto:vasundra.toure@ntnu.no))
