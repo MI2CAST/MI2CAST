@@ -20,13 +20,13 @@ Furthermore, one big challenge relies on capturing enough contextual information
 MI2CAST defines four main rules to be followed when annotating a molecular interaction causal statement:
 - Rule 1: The source and target entities of a causal interaction must be specified
 - Rule 2: The regulation sign of a causal interaction must be specified
-- Rule 3: The quality of a causal interaction should be specified
+- Rule 3: The origin of a causal interaction should be specified
 - Rule 4: The available context about a causal interaction should be specified
 
 In addition to the rules, specific terms are advised to be annotated when the data is available. For each term, recommendations on ontologies and controlled vocabularies to use are suggested. We strongly advise to follow the recommendations.
 
 
-### Entity
+### Entity: source and target entity of the causal statement (mandatory)
 A unique identifier helps to identify the specific biological entity involved in the causal statement.
 A causal statement has at least one source entity and one target entity.
 
@@ -40,41 +40,45 @@ We recommend to use different ontologies depending on the type of the biological
 * Chemical: 
   * Recommended: [chebi ID](https://www.ebi.ac.uk/chebi/)
   * Alternative: [pubchem ID](https://pubchem.ncbi.nlm.nih.gov/)
-* Family: list of string of IDs following the rules (for a family of genes, use ensembl gene ID or Entrez gene ID, for a family of proteins, use uniprot IDs, etc).
+* Family: 
+  * provide a list of members IDs following the rules (for a family of genes, use ensembl gene ID or Entrez gene ID, for a family of proteins, use uniprot IDs, etc)
+  * annotate the biological type of the entity as a "[family](http://purl.obolibrary.org/obo/MI_1304)"
 * Complex:
   * For stable complex: [complexportal ID](https://www.ebi.ac.uk/complexportal/home)
-  * For transient complex: list of string of the components of the complex.
+  * For transient complex: 
+    * provide a list of the components of the complex
+    * annotate the biological type of the entity as a "[complex](http://purl.obolibrary.org/obo/MI_0314)"
 * Phenotype: [gene ontology ID](http://www.geneontology.org/)
 * Stimulus: To be discussed, see issue [#2](https://github.com/vtoure/MICAST/issues/2).
 
-### Regulation
-The type of regulation exerced by the source entity upon the target entity in the causal statement. For instance, an up-regulation or a down-regulation.
+### Regulation sign of the causal statement (mandatory)
+The sign of regulation exerced by the source entity upon the target entity in the causal statement. For instance, an up-regulation or a down-regulation.
 
 Ontology recommendation: 
 * [Molecular Interaction](https://www.ebi.ac.uk/ols/ontologies/mi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FMI_2234)
 * [Relation Ontology](https://www.ebi.ac.uk/ols/ontologies/ro/properties?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FRO_0002506).
 
 
-### Quality
+### Origin of the causal statement (mandatory)
 The confidence level provides information about the assessment and the provenance of the causal statement: In which publication this causal relationship has been found? What the causal interaction manually curated or automatically generated?
 This provides some criteria to rank a causal statement.
 
 #### Reference
 Publication or combination of publications that led to the creation of a causal interaction.
 
-Ontology recommendation: [PubMed ID](https://www.ncbi.nlm.nih.gov/pmc/pmctopmid/).
+Ontology recommendation: [PubMed ID](https://www.ncbi.nlm.nih.gov/pmc/pmctopmid/) or [DOI](https://www.doi.org/) in the case of articles from preprint servers.
 
-#### The evidence
+#### Evidence
 How does the causal statement has been annotated (e.g., experimental procedure, literature curation, computational inference, etc)? This information helps the user of the data to know how to trust this causal statement.
 
 Ontology recommendation:  [Evidence & Conclusion Ontology](http://www.evidenceontology.org/)
 
 
-### CONTEXT
-The context informs about necessary circumstances under which a causal statement has been observed or proven to be true.
+### Available context of the causal statement (optional)
+The context informs about necessary circumstances under which the source entity or the target entity, or the causal interaction has been observed or proven to be true.
 
-#### Biological activity or mechanism
-The molecular function of the entity, meaning the function of the entity that causes the regulation or that is regulated (e.g., kinase activity). Otherwise, the mechanism of the causal statement that constitutes the biological effect on the target entity (e.g., phosphorylation, binding, etc).
+#### Biological activity or biological mechanism
+The molecular function or activity of the entity that is the cause of the regulation or that is regulated (e.g., kinase activity). Otherwise, the mechanism of the causal statement that constitutes the biological effect on the target entity (e.g., phosphorylation, binding, etc).
 
 Ontology recommendation: 
 * [Gene Ontology Molecular Function](http://geneontology.org/) (GO:MF) for the biological activity,
@@ -111,10 +115,10 @@ Ontology recommendation: [Taxonomy ID](https://www.ncbi.nlm.nih.gov/taxonomy) fr
 Cell line where the causal statement is observed or, tissue or cell type where the causal interaction occurs. 
 
 Ontology recommendation:
-* [BRENDA](https://www.brenda-enzymes.org/ontology.php?ontology_id=3)
-* [Cell Ontology](http://www.obofoundry.org/ontology/cl.html) 
-* [Uberon](http://uberon.github.io/) 
-See discussions  [#5](https://github.com/vtoure/MICAST/issues/5).
+* [Cellosaurus](https://web.expasy.org/cellosaurus/) for cell line
+* [BRENDA](https://www.brenda-enzymes.org/ontology.php?ontology_id=3) for tissue and cell type
+* [Cell Ontology](http://www.obofoundry.org/ontology/cl.html) for cell type
+* [Uberon](http://uberon.github.io/) for tissue type.
 
 
 #### Experimental setup
