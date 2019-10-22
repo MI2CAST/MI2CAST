@@ -1,5 +1,5 @@
 # Formalising the representation of causal statements
-The MI2CAST (Minimum Information about a Molecular Interaction Causal Statement) guidelines describe information that is necessary to depict causal interactions in molecular biology. The aim is to homogeneize their representation for a better usability and understanding, by making the data “FAIR” (Findable, Accessible, Interoperable and Reproducible).
+The MI2CAST (Minimum Information about a Molecular Interaction Causal Statement) guidelines describe information that are necessary to depict causal interactions in molecular biology. The aim is to homogeneize their representation for a better usability and understanding, by making the data “FAIR” (Findable, Accessible, Interoperable and Reproducible).
 
 These guidelines target:
 * biological curators on the information content to provide about molecular causal interactions,
@@ -82,10 +82,10 @@ Ontology recommendation:  [Evidence & Conclusion Ontology](http://www.evidenceon
 
 
 ### Available context of the causal statement (optional)
-The context informs about necessary circumstances under which the source entity or the target entity, or the causal interaction has been observed or proven to be true. Every single contextual information is not necessarily always available, neither necessary for the causal interaction to occur.  
+The context informs about the necessary circumstances or observed conditions under which the source entity, the target entity or the causal interaction needs to comply with for the causal statement to occur. Every single contextual information in Rule 4 is not necessarily always available for all causal statements. Consequently, only the known and relevant contextual information for a causal statement should be annotated.  
 
 #### Biological activity or biological mechanism
-The molecular function or activity of the entity that is the cause of the regulation or that is regulated (e.g., kinase activity). Otherwise, the mechanism of the causal statement that constitutes the biological effect on the target entity (e.g., phosphorylation, binding, etc).
+The biological function corresponds to the molecular activity of the entity that is the cause of the regulation or that is regulated (e.g., kinase activity). If this information is not available, the biological mechanism of the causal statement that constitutes the biological effect of the source entity on the target entity (e.g., the source entity phosphorylates the target entity which increases the target's activity) should be provided.
 
 Ontology recommendation: 
 * [Gene Ontology Molecular Function](http://geneontology.org/) (GO:MF) for the biological activity,
@@ -94,42 +94,56 @@ Ontology recommendation:
 
 
 #### Biological type
-The biological type of the entity involved (e.g., gene, protein, chemical, complex, family, etc).
+The biological type of the entity (e.g., gene, protein, chemical, complex, family, etc) should be provided when the entity's identifier does not correspond to the type of the entity truely annotated. For instance, a publication mentions a transcript but there is no identifier provided of the specific transcript. The curator can then annotate the entity with a gene identifier and specify the biological type as "transcript".
 
 Ontology recommendation: [Molecular Interaction Controlled Vocabulary](https://www.ebi.ac.uk/ols/ontologies/mi) - branch  [interactor type](https://www.ebi.ac.uk/ols/ontologies/mi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FMI_0313).
 
 #### Biological modification
-Information about the modification of the source or the target entity necessary for the causal regulation to occur (e.g., the source should be phosphorylated at residue XXX in position YYY to up-regulate the target).
+The biological modification corresponds to physical changes of an entity necessary for the causal regulation to occur (e.g., the source entity should be phosphorylated at residue XXX in position YYY to up-regulate the target).
+
 We recommend to annotate:
-* the modification type (e.g., phosphorylation of a protein, methylation of a gene or RNA) for which we recommend using [PSI-MOD](https://www.ebi.ac.uk/ols/ontologies/mod) for proteins , the [SO](http://www.sequenceontology.org/) for genes
+* the modification type (e.g., phosphorylation of a protein, methylation of a gene) for which we recommend using [PSI-MOD](https://www.ebi.ac.uk/ols/ontologies/mod) for proteins , the [SO](http://www.sequenceontology.org/) for genes
 * the modified residue, if known, using [ChEBI](https://www.ebi.ac.uk/chebi/)
-* the position of the modification with a number indicating which residue is modified, if known
- 
+* the position of the modification with a number, if known
 
 
-#### Compartment
-The cellular localization of the entities or the causal regulation. The causal interaction can occur inside a cell or between two cells. 
+#### The location of the causal interaction or the entity
+The location of the causal interaction or the entity contains different levels of locational definitions from the highest level being the taxon to the most detailed level being the cellular component.
 
-Ontology recommendation:  [Gene Ontology Cellular Component](http://geneontology.org/) (GO:CC).
-
-#### Taxon
-Type of taxon where the causal regulation is observed. 
-Taxon can also refer to the organism of the source or target entity to distinguish causality assessed with entities from different taxons. In some cases, the taxon information is implicitly defined in the Entity's identifier. 
+##### Taxon
+The taxon corresponds to the organism where the causal regulation has its native function. The taxon can also refer to the organism of the source or the target entity, to be able to distinguish causality assessed with entities from different taxons (heterologous case). Finally, this information can be implicitly defined in the Entity's identifier (Uniprot ID, Ensembl ID). 
 
 Ontology recommendation: [Taxonomy ID](https://www.ncbi.nlm.nih.gov/taxonomy) from NCBI.
 
-#### Cell Line, Tissue or Cell Type
-Cell line where the causal statement is observed or, tissue or cell type where the causal interaction occurs. 
+##### Tissue type
+The tissue type where the causal interaction occurs.
+
+Ontology recommendation: 
+* [BRENDA](https://www.brenda-enzymes.org/ontology.php?ontology_id=3)
+* [Uberon](https://uberon.github.io/) which covers also body parts and organs.
+
+##### Cell type
+The cell type where the causal interaction occurs.
+
+Ontology recommendation:
+* [Cell Ontology](http://www.obofoundry.org/ontology/cl.html)
+* [BRENDA](https://www.brenda-enzymes.org/ontology.php?ontology_id=3)
+
+##### Cell Line
+The cell line where the causal statement is observed. 
 
 Ontology recommendation:
 * [Cellosaurus](https://web.expasy.org/cellosaurus/) for cell line
-* [BRENDA](https://www.brenda-enzymes.org/ontology.php?ontology_id=3) for tissue and cell type
-* [Cell Ontology](http://www.obofoundry.org/ontology/cl.html) for cell type
-* [Uberon](http://uberon.github.io/) for tissue type.
+* [BRENDA](https://www.brenda-enzymes.org/ontology.php?ontology_id=3)
+
+##### Cellular component
+The cellular component corresponds to the cellular localization (or compartment) where the entities are localized or where the causal interaction occurs. The causal interaction can occur inside a cell or between two cells.
+
+Ontology recommendation:  [Gene Ontology Cellular Component](http://geneontology.org/) (GO:CC).
 
 
 #### Experimental setup
-A source or target entity can be represented by a specific experimental setup which could explain the causal character of the causal statement. For example, an overexpression of a gene.
+The experimental setup corresponds to a specific experimental condition used to detect an entity's involvement in a causal statement. For example, the overexpression of a gene.
 
 Ontology recommendation: 
 * [Molecular Interaction Controlled Vocabulary](https://www.ebi.ac.uk/ols/ontologies/mi) - branch [experimental preparation](https://www.ebi.ac.uk/ols/ontologies/mi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FMI_0346)
@@ -141,7 +155,6 @@ The following graph provides an overview of the list of terms requested to be ch
 <p align="center">
   <img src="https://github.com/vtoure/MI2CAST/blob/master/images/mi2cast.svg" alt="MI2CAST terms"/>
 </p>
-
 
 
 ## MI2CAST Supports
