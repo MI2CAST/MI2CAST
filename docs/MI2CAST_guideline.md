@@ -1,5 +1,5 @@
 # Information content of molecular causal statements
-The MI2CAST (Minimum Information about a Molecular Interaction Causal Statement) guidelines describe information that are necessary to depict causal interactions in molecular biology. The aim is to homogeneize their representation for a better usability and understanding, by making the data “FAIR” (Findable, Accessible, Interoperable and Reproducible).
+The MI2CAST (Minimum Information about a Molecular Interaction Causal Statement) guidelines describe information that is necessary to depict causal interactions in molecular biology. The aim is to homogenize their representation for better usability and understanding, by making the data “FAIR” (Findable, Accessible, Interoperable and Reproducible).
 
 These guidelines target:
 * biological curators on the information content to provide about molecular causal interactions,
@@ -14,7 +14,7 @@ The core of a causal statement is composed of three elements: the *source entity
   <img src="https://github.com/vtoure/MI2CAST/blob/master/images/causalStatement.svg" alt="causal statement"/>
 </p>
 
-Furthermore, one big challenge relies on capturing enough contextual information to gradually enrich a causal statement. This type of information may be diffuse and difficult to curate. With these guidelines, we hope to formalize the depiction of that metadata in order to obtain contextualized causal statements that can be used for applications in systems biology and systems medicine.
+Furthermore, one big challenge relies on capturing enough contextual information to gradually enrich a causal statement. This type of information may be diffuse and difficult to curate. With these guidelines, we hope to formalize the depiction of that metadata to obtain contextualized causal statements that can be used for applications in systems biology and systems medicine.
 
 
 ## The MI2CAST rules
@@ -58,7 +58,7 @@ We recommend to use different ontologies depending on the type of the biological
 
 
 ### Regulation sign of the causal statement (mandatory)
-The regulation sign exerced by the source entity upon the target entity can correspond to an up-regulation or a down-regulation of a specific activity or the quantity of the target.
+The regulation sign exerted by the source entity upon the target entity can correspond to an up-regulation or a down-regulation of a specific activity or the quantity of the target.
 
 Ontology recommendation: 
 * [Molecular Interaction](https://www.ebi.ac.uk/ols/ontologies/mi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FMI_2234)
@@ -76,13 +76,13 @@ Ontology recommendation:
 * [DOI](https://www.doi.org/) in the case of articles from preprint servers.
 
 #### Evidence
-The evidence describes how the causal statement has been annotated and has been assessed (e.g., specific experimental procedure, literature curation, computational inference, etc). This information helps the user to evaluate the causal statement. The evidence can be a combination of multiple ones (e.g., causal statement manually extracted from a manuscript based on the results of an experiment).
+The evidence describes how the causal statement has been annotated and has been assessed (e.g., specific experimental procedure, literature curation, computational inference, etc). This information helps the user to evaluate the causal statement. The evidence can be a combination of multiple ones (e.g., a causal statement manually extracted from a manuscript based on the results of an experiment).
 
 Ontology recommendation:  [Evidence & Conclusion Ontology](http://www.evidenceontology.org/)
 
 
 ### Available context of the causal statement (optional)
-The context informs about the necessary circumstances or observed conditions under which the source entity, the target entity or the causal interaction needs to comply with for the causal statement to occur. Every single contextual information in Rule 4 is not necessarily always available for all causal statements. Consequently, only the known and relevant contextual information for a causal statement should be annotated.  
+The context informs about the necessary circumstances or observed conditions under which the source entity, the target entity or the causal interaction need to comply with for the causal statement to occur. Every single contextual information in Rule 4 is not necessarily always available for all causal statements. Consequently, only the known and relevant contextual information for a causal statement should be annotated.  
 
 #### Biological activity or biological mechanism
 The biological function corresponds to the molecular activity of the entity that is the cause of the regulation or that is regulated (e.g., kinase activity). If this information is not available, the biological mechanism of the causal statement that constitutes the biological effect of the source entity on the target entity (e.g., the source entity phosphorylates the target entity which increases the target's activity) should be provided.
@@ -102,7 +102,7 @@ Ontology recommendation: [Molecular Interaction Controlled Vocabulary](https://w
 The biological modification corresponds to physical changes of an entity necessary for the causal regulation to occur (e.g., the source entity should be phosphorylated at residue XXX in position YYY to up-regulate the target).
 
 We recommend to annotate:
-* the modification type (e.g., phosphorylation of a protein, methylation of a gene) for which we recommend using [PSI-MOD](https://www.ebi.ac.uk/ols/ontologies/mod) for proteins , the [SO](http://www.sequenceontology.org/) for genes
+* the modification type (e.g., phosphorylation of a protein, methylation of a gene) for which we recommend using [PSI-MOD](https://www.ebi.ac.uk/ols/ontologies/mod) for proteins, the [SO](http://www.sequenceontology.org/) for genes
 * the modified residue, if known, using [ChEBI](https://www.ebi.ac.uk/chebi/)
 * the position of the modification with a number, if known
 
