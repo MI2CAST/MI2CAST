@@ -1,29 +1,30 @@
 # Formalising the representation of causal statements
-The MI2CAST (Minimum Information about a Molecular Interaction causal statement) guideline describes information that is necessary to depict causal interactions in molecular biology. The aim is to homogeneise their representation for a better usability and understanding, by making the data “FAIR” (Findable, Accessible, Interoperable and Reproducible).
+The MI2CAST (Minimum Information about a Molecular Interaction Causal Statement) guidelines describe information that is necessary to depict causal interactions in molecular biology. The aim is to homogeneize their representation for a better usability and understanding, by making the data “FAIR” (Findable, Accessible, Interoperable and Reproducible).
 
-This guideline targets curators and data providers of causality in molecular interactions and biological systems, but also tool developers, text miners to know what type of information can be expected when dealing with causal statements.
+These guidelines targets:
+* biological curators on the information content to provide about molecular causal interactions,
+* biological experimentalists to assess a list of criteria necessary to contextualize causal interactions,
+* tool developers and text miners to know the type of information that can be expected
 
 
 ## Introduction to causal statements
-A causal statement is a directed interaction between biological entities where a *source entity* (regulator) regulates and has an influence on the activity or the quantity of a *target entity* (regulatee). The *causal interaction* can be direct (without intermediates) or indirect (the causal impact of *source entity* is transmitted to the *target entity* by a third).
-
-The core of a causal statement is composed of three elements: the *source entity*, the *causal interaction* (representing the regulation) and the *target entity*. 
+The core of a causal statement is composed of three elements: the *source entity*, the *causal interaction* and the *target entity*. It is a directed interaction between biological entities where a *source entity* (regulator) influences the activity or the quantity of a *target entity* (regulatee). The *causal interaction* can be direct (without intermediates) or indirect (the causal effect of *source entity* is transmitted to the *target entity* by a third).
 
 <p align="center">
   <img src="https://github.com/vtoure/MI2CAST/blob/master/images/causalStatement.svg" alt="causal statement"/>
 </p>
 
-Furthermore, one big challenge relies on capturing enough contextual information to gradually enrich a causal statement and define boundaries under which it is true. This type of information may be diffuse and difficult to curate. With this guideline, we hope to formalise the depiction of that metadata in order to obtain contextualised causal statements that can be used for applications in systems biology and systems medicine.
+Furthermore, one big challenge relies on capturing enough contextual information to gradually enrich a causal statement. This type of information may be diffuse and difficult to curate. With these guidelines, we hope to formalize the depiction of that metadata in order to obtain contextualized causal statements that can be used for applications in systems biology and systems medicine.
 
 
 ## The MI2CAST rules
-MI2CAST defines four main rules to be followed when annotating a molecular interaction causal statement:
+MI2CAST defines four main rules:
 - Rule 1: The source and target entities of a causal interaction must be specified
 - Rule 2: The regulation sign of a causal interaction must be specified
-- Rule 3: The origin of a causal interaction should be specified
+- Rule 3: The origin of a causal interaction must be specified
 - Rule 4: The available context about a causal interaction should be specified
 
-In addition to the rules, specific terms are advised to be annotated when the data is available. For each term, recommendations on ontologies and controlled vocabularies to use are suggested. We strongly advise to follow the recommendations.
+In addition to the rules, specific terms are advised to be annotated when the data is available. For each term, recommendations on ontologies and controlled vocabularies to use are suggested.
 
 
 ### Entity: source and target entity of the causal statement (mandatory)
@@ -50,6 +51,11 @@ We recommend to use different ontologies depending on the type of the biological
     * annotate the biological type of the entity as a "[complex](http://purl.obolibrary.org/obo/MI_0314)"
 * Phenotype: [gene ontology ID](http://www.geneontology.org/)
 * Stimulus: To be discussed, see issue [#2](https://github.com/vtoure/MICAST/issues/2).
+
+<p align="center">
+  <img src="https://github.com/vtoure/MI2CAST/blob/master/images/identifiers.pdf" alt="identifiers recommendation"/>
+</p>
+
 
 ### Regulation sign of the causal statement (mandatory)
 The sign of regulation exerced by the source entity upon the target entity in the causal statement. For instance, an up-regulation or a down-regulation.
