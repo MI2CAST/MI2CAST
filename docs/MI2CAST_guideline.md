@@ -94,7 +94,7 @@ Ontology recommendation:
 
 
 #### Biological type
-The biological type of the entity (e.g., gene, protein, chemical, complex, family, etc) should be provided when the entity's identifier does not correspond to the type of the entity truely annotated. For instance, a publication mentions a transcript but there is no identifier provided of the specific transcript. The curator can then annotate the entity with a gene identifier and specify the biological type as "transcript".
+The biological type of the entity (e.g., gene, protein, chemical, complex, family, etc) should be provided when the entity's identifier does not correspond to the type of the entity truly annotated. For instance, a publication mentions a transcript but there is no identifier provided of the specific transcript. The curator can then annotate the entity with a gene identifier and specify the biological type as "transcript".
 
 Ontology recommendation: [Molecular Interaction Controlled Vocabulary](https://www.ebi.ac.uk/ols/ontologies/mi) - branch  [interactor type](https://www.ebi.ac.uk/ols/ontologies/mi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FMI_0313).
 
