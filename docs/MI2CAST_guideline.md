@@ -1,4 +1,4 @@
-# Formalising the representation of causal statements
+# Information content of molecular causal statements
 The MI2CAST (Minimum Information about a Molecular Interaction Causal Statement) guidelines describe information that are necessary to depict causal interactions in molecular biology. The aim is to homogeneize their representation for a better usability and understanding, by making the data “FAIR” (Findable, Accessible, Interoperable and Reproducible).
 
 These guidelines target:
