@@ -1,7 +1,7 @@
 # Formalising the representation of causal statements
 The MI2CAST (Minimum Information about a Molecular Interaction Causal Statement) guidelines describe information that is necessary to depict causal interactions in molecular biology. The aim is to homogeneize their representation for a better usability and understanding, by making the data “FAIR” (Findable, Accessible, Interoperable and Reproducible).
 
-These guidelines targets:
+These guidelines target:
 * biological curators on the information content to provide about molecular causal interactions,
 * biological experimentalists to assess a list of criteria necessary to contextualize causal interactions,
 * tool developers and text miners to know the type of information that can be expected
@@ -28,7 +28,7 @@ In addition to the rules, specific terms are advised to be annotated when the da
 
 
 ### Entity: source and target entity of the causal statement (mandatory)
-A unique identifier helps to identify the specific biological entity involved in the causal statement.
+A unique identifier must be provided to identify the specific biological entity involved in the causal statement.
 A causal statement has at least one source entity and one target entity.
 
 We recommend to use different ontologies depending on the type of the biological entity:
@@ -53,12 +53,12 @@ We recommend to use different ontologies depending on the type of the biological
 * Stimulus: To be discussed, see issue [#2](https://github.com/vtoure/MICAST/issues/2).
 
 <p align="center">
-  <img src="https://github.com/vtoure/MI2CAST/blob/master/images/identifiers.pdf" alt="identifiers recommendation"/>
+  <img src="https://github.com/vtoure/MI2CAST/blob/master/images/identifiers.svg" alt="identifiers recommendation"/>
 </p>
 
 
 ### Regulation sign of the causal statement (mandatory)
-The sign of regulation exerced by the source entity upon the target entity in the causal statement. For instance, an up-regulation or a down-regulation.
+The regulation sign exerced by the source entity upon the target entity can correspond to an up-regulation or a down-regulation of a specific activity or the quantity of the target.
 
 Ontology recommendation: 
 * [Molecular Interaction](https://www.ebi.ac.uk/ols/ontologies/mi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FMI_2234)
@@ -66,22 +66,23 @@ Ontology recommendation:
 
 
 ### Origin of the causal statement (mandatory)
-The confidence level provides information about the assessment and the provenance of the causal statement: In which publication this causal relationship has been found? What the causal interaction manually curated or automatically generated?
-This provides some criteria to rank a causal statement.
+The origin of the causal statement provides information about the assessment and the provenance of the causal statement: In which publication this causal relationship has been found? How was the causal interaction generated? It provides some criteria to be able to rank a causal statement.
 
 #### Reference
-Publication or combination of publications that led to the creation of a causal interaction.
+The reference relates to a publication or a combination of publications that allowed the identification of a causal interaction.
 
-Ontology recommendation: [PubMed ID](https://www.ncbi.nlm.nih.gov/pmc/pmctopmid/) or [DOI](https://www.doi.org/) in the case of articles from preprint servers.
+Ontology recommendation: 
+* [PubMed ID](https://www.ncbi.nlm.nih.gov/pmc/pmctopmid/)
+* [DOI](https://www.doi.org/) in the case of articles from preprint servers.
 
 #### Evidence
-How does the causal statement has been annotated (e.g., experimental procedure, literature curation, computational inference, etc)? This information helps the user of the data to know how to trust this causal statement.
+The evidence describes how the causal statement has been annotated and has been assessed (e.g., specific experimental procedure, literature curation, computational inference, etc). This information helps the user to evaluate the causal statement. The evidence can be a combination of multiple ones (e.g., causal statement manually extracted from a manuscript based on the results of an experiment).
 
 Ontology recommendation:  [Evidence & Conclusion Ontology](http://www.evidenceontology.org/)
 
 
 ### Available context of the causal statement (optional)
-The context informs about necessary circumstances under which the source entity or the target entity, or the causal interaction has been observed or proven to be true.
+The context informs about necessary circumstances under which the source entity or the target entity, or the causal interaction has been observed or proven to be true. Every single contextual information is not necessarily always available, neither necessary for the causal interaction to occur.  
 
 #### Biological activity or biological mechanism
 The molecular function or activity of the entity that is the cause of the regulation or that is regulated (e.g., kinase activity). Otherwise, the mechanism of the causal statement that constitutes the biological effect on the target entity (e.g., phosphorylation, binding, etc).
