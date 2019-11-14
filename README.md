@@ -6,7 +6,7 @@ This repository contains the guidelines defined for the curation of causal state
 ## Introduction
 A causal statement is defined as an interaction between biological material entities (gene, protein, etc) where a source entity regulates the activity or the quantity of a target entity.
 
-This repository is a community effort to homogenize and categorize information to depict about causal relationships. Terms are defined and ontologies/controlled vocabularies to use are suggested for each term.
+This repository is a community effort to homogenize and categorize information for representing causal relationships. Terms are defined and ontologies/controlled vocabularies to use are suggested for each term.
 
 ## Documentation
 Access to the [MI2CAST guidelines](docs/MI2CAST_guideline.md).
