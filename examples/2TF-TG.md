@@ -11,14 +11,14 @@ This example of genetic regulation is based on the following paper: "[Induction 
 
 | Term | Identifier | Name/Label | Database |
 |---|---|---|---|
-| source | [UniProtKB:P05412](https://www.uniprot.org/uniprot/P05412) *and* [P15408](https://www.uniprot.org/uniprot/P15408) | JUN *and* FOSL2 | Uniprot |
+| source | [UniProtKB:P05412](https://www.uniprot.org/uniprot/P05412) *and* [UniProtKB:P15408](https://www.uniprot.org/uniprot/P15408) | JUN *and* FOSL2 | UniProtKB |
 | target | [Entrez:5971](https://www.ncbi.nlm.nih.gov/gene/5971) | RELB | Entrez gene |
 | effect | [MI:2235](http://purl.obolibrary.org/obo/MI_2235) | up-regulates | PSI-MI |
 | reference | [PMID:15596805](https://www.ncbi.nlm.nih.gov/pubmed/15596805) | "Induction of the RelB NF-kappaB subunit..." | Pubmed |
 | evidence | [ECO:0007682](http://purl.obolibrary.org/obo/ECO_0007682) | reporter gene assay evidence used in manual assertion | Evidence and Conclusion Ontology  |
 | biological mechanism | [MI:2247](http://purl.obolibrary.org/obo/MI_2247) | transcription regulation | PSI-MI |
 | compartment | [GO:0005634]( http://purl.obolibrary.org/obo/GO_0005634) | nucleus | GO:CC |
-| taxon | [NCBI:tax9606](http://purl.obolibrary.org/obo/NCBITaxon_9606) | Homo sapiens | NCBI taxonomy |
+| taxon | [NCBI:txid9606](http://purl.obolibrary.org/obo/NCBITaxon_9606) | Homo sapiens | NCBI taxonomy |
 | cell line | [BTO:0000944](http://purl.obolibrary.org/obo/BTO_0000944) | NIH-3T3 cell | BRENDA |
 | experimental setup source | [ECO:0005802](http://purl.obolibrary.org/obo/ECO_0005802) | cell transfection evidence used in manual assertion | PSI-MI |
 | experimental setup target | [SO:0000832](http://purl.obolibrary.org/obo/SO_0000832) | promoter_region | Sequence Ontology |
