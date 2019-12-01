@@ -9,21 +9,21 @@ This example of genetic regulation is based on the following paper: "[Characteri
 
 ## Annotation of the causal interaction following MI2CAST
 
-| Term                         | Identifier | Name/Label                                                       | Database                          |
-|------------------------------|------------|------------------------------------------------------------------|-----------------------------------|
-| source                       | A0AVK6     | E2F8                                                             | Uniprot                           |
-| target                       | 898        | CCNE1                                                            | Entrez gene                       |
-| regulation sign              | 2240       | down-regulates                                                   | PSI-MI                            |
-| reference                    | 16179649   | "Characterization of E2F8, a novel..."                           | Pubmed                            |
-| evidence                     | 0005648    | luciferase reporter gene assay evidence used in manual assertion | Evidence and Conclusion Ontology  |
-| biological mechanism         | 2247       | transcription regulation                                         | PSI-MI                            |
-| compartment of interaction   | 0005634    | nucleus                                                          | GO:CC                             |
-| taxon                        | 9606       | Homo sapiens                                                     | NCBI taxonomy                     |
-| cell line                    | 0001938    | human osteosarcoma cell line                                     | BRENDA                            |
-| experimental setup source 1  | 0506       | over expressed level                                             | PSI-MI                            |
-| experimental setup source 2  | 0331       | engineered                                                       | PSI-MI                            |
-| experimental setup target 1  | 0331       | engineered                                                       | PSI-MI                            |
-| experimental setup target 2  | 0001679    | transcription\_regulatory\_region                                | Sequence Ontology                 |
+| Term | Identifier | Name/Label | Database |
+|---|---|---|---|
+| source | [UniProtKB:A0AVK6](https://www.uniprot.org/uniprot/A0AVK6) | E2F8 | UniProt |
+| target | [Entrez:898](https://www.ncbi.nlm.nih.gov/gene/898) | CCNE1 | Entrez gene |
+| effect | [MI:2240](http://purl.obolibrary.org/obo/MI_2240) | down-regulates | PSI-MI |
+| reference | [PMID:16179649](https://www.ncbi.nlm.nih.gov/pubmed/16179649) | "Characterization of E2F8, a novel..." | Pubmed |
+| evidence | [ECO:0005648](http://purl.obolibrary.org/obo/ECO_0005648) | luciferase reporter gene assay evidence used in manual assertion | Evidence and Conclusion Ontology |
+| biological mechanism | [MI:2247](http://purl.obolibrary.org/obo/MI_2247) | transcription regulation | PSI-MI |
+| compartment | [GO:0005634](http://purl.obolibrary.org/obo/GO_0005634) | nucleus | GO:CC |
+| taxon | [NCBI:txid9606](http://purl.obolibrary.org/obo/NCBITaxon_9606) | Homo sapiens | NCBI taxonomy |
+| cell line | [BTO:0001938](http://purl.obolibrary.org/obo/BTO_0001938) | human osteosarcoma cell line | BRENDA |
+| experimental setup source 1 | [MI:0506](http://purl.obolibrary.org/obo/MI_0506) | over expressed level | PSI-MI |
+| experimental setup source 2 | [MI:0331](http://purl.obolibrary.org/obo/MI_0331) | engineered | PSI-MI |
+| experimental setup target 1 | [MI:0331](http://purl.obolibrary.org/obo/MI_0331) | engineered | PSI-MI |
+| experimental setup target 2 | [SO:0001679](http://purl.obolibrary.org/obo/SO_0001679) | transcription\_regulatory\_region| Sequence Ontology |
 
 
 ## Written explanation of the causal statement
