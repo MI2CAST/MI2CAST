@@ -15,12 +15,12 @@ PMID:24909430: the causal statement is assessed in the article entitled “Inter
 ECO:0005581 (enzyme-linked immunoabsorbent assay evidence used in manual assertion): the observation of the causal interaction is done via an ELISA and has been extracted through a human review. An Evidence and Conclusion Ontology identifier is given. 
 
 Rule 4:
->>4.1: Biological activity or mechanism:
-MI:2247 (transcription regulation): the biological mechanism of the causal interaction is a transcriptional regulation, annotated with an MI controlled vocabulary term. E2Ff8 is a regulator of the transcription of CCNE1.
+4.1: Biological activity or mechanism:
+GO:0045578 (negative regulation of B cell differentiation): the biological mechanism of the causal interaction is a negative regulation of B cell differentiation, annotated with a Gene Ontology term. Regulatory T cell is a regulator of germinal center B cells.
 
 4.2: The biological type of the source and target entities is not necessary to be annotated as the correct identifiers have been given: both entities are cells annotated with a Cell Ontology term identifier.
 
->>4.3: Biological modification
+4.3: Biological modification
 There is no information about a specific biological modification of the source nor the target entity in this article, thus no annotation is added for Rule 4.3.
 
 4.4: Taxon
@@ -32,6 +32,6 @@ When we describe causal interactions between cells, it is not necessary to infor
 4.5.4: Cellular component 
 When we describe causal interactions between cells, it is not necessary to inform the cellular component.
 
->>4.6: Experimental setup
-MI:0506 (over expressed level) and MI:0331 (engineered) for the source entity: The source entity has been over-expressed and engineered during the experiment, annotated with an MI controlled vocabulary term.
-MI:0331 (engineered) and SO:0001679 (transcription_regulatory_region) for the target entity: the target entity has being engineered and its transcription regulatory region is used during the experiment, annotated with an MI controlled vocabulary term and a Sequence Ontology (SO) term.
+4.6: Experimental setup
+ECO:0005580 (flow cytometry evidence used in manual assertion) for the source entity: The source entity has been identified and collected through flow cytocmetry during the experiment, annotated with an ECO term.
+MI:0421 (Identification by antibody) for the target entity: the target entity has been identified via antibody binding during the experiment, annotated with a MI term.
