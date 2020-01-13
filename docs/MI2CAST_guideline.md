@@ -11,7 +11,7 @@ These guidelines target:
 The core of a causal statement is composed of three elements: the *source entity*, the *causal interaction* and the *target entity*. It is a directed interaction between biological entities where a *source entity* (regulator) influences the activity or the quantity of a *target entity* (regulatee). The *causal interaction* can be direct (without intermediates) or indirect (the causal effect of *source entity* is transmitted to the *target entity* by a third).
 
 <p align="center">
-  <img src="https://github.com/vtoure/MI2CAST/blob/master/images/causalStatement.svg" alt="causal statement"/>
+  <img src="https://github.com/MI2CAST/MI2CAST/blob/master/images/causalStatement.svg" alt="causal statement"/>
 </p>
 
 Furthermore, one big challenge relies on capturing enough contextual information to gradually enrich a causal statement. This type of information may be diffuse and difficult to curate. With these guidelines, we hope to formalize the depiction of that metadata to obtain contextualized causal statements that can be used for applications in systems biology and systems medicine.
@@ -19,10 +19,10 @@ Furthermore, one big challenge relies on capturing enough contextual information
 
 ## The MI2CAST rules
 MI2CAST defines four main rules:
-- Rule 1: The source and target entities of a causal interaction must be specified
-- Rule 2: The regulation sign of a causal interaction must be specified
-- Rule 3: The origin of a causal interaction must be specified
-- Rule 4: The available context about a causal interaction should be specified
+- Rule 1: The source and target entities must be specified
+- Rule 2: The effect must be specified
+- Rule 3: The provenance and evidence must be specified
+- Rule 4: The defining context should be specified
 
 In addition to the rules, specific terms are advised to be annotated when the data is available. For each term, recommendations on ontologies and controlled vocabularies to use are suggested.
 
@@ -49,23 +49,23 @@ We recommend to use different ontologies depending on the type of the biological
   * For transient complex: 
     * provide a list of the components of the complex
     * annotate the biological type of the entity as a "[complex](http://purl.obolibrary.org/obo/MI_0314)"
-* Phenotype: [gene ontology ID](http://www.geneontology.org/)
+* Phenotype: [gene ontology biological process ID](http://www.geneontology.org/)
 * Stimulus: To be discussed, see issue [#2](https://github.com/vtoure/MICAST/issues/2).
 
 <p align="center">
-  <img src="https://github.com/vtoure/MI2CAST/blob/master/images/identifiers.svg" alt="identifiers recommendation"/>
+  <img src="https://github.com/MI2CAST/MI2CAST/blob/master/images/identifiers.svg" alt="identifiers recommendation"/>
 </p>
 
 
-### Regulation sign of the causal statement (mandatory)
-The regulation sign exerted by the source entity upon the target entity can correspond to an up-regulation or a down-regulation of a specific activity or the quantity of the target.
+### Effect of the causal statement (mandatory)
+The effect exerted by the source entity upon the target entity can correspond to an up-regulation or a down-regulation of the target.
 
 Ontology recommendation: 
 * [Molecular Interaction](https://www.ebi.ac.uk/ols/ontologies/mi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FMI_2234)
 * [Relation Ontology](https://www.ebi.ac.uk/ols/ontologies/ro/properties?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FRO_0002506).
 
 
-### Origin of the causal statement (mandatory)
+### Provenance and evidence type of the causal statement (mandatory)
 The origin of the causal statement provides information about the assessment and the provenance of the causal statement: In which publication this causal relationship has been found? How was the causal interaction generated? It provides some criteria to be able to rank a causal statement.
 
 #### Reference
@@ -75,10 +75,17 @@ Ontology recommendation:
 * [PubMed ID](https://www.ncbi.nlm.nih.gov/pmc/pmctopmid/)
 * [DOI](https://www.doi.org/) in the case of articles from preprint servers.
 
-#### Evidence
+#### Type of evidence
 The evidence describes how the causal statement has been annotated and has been assessed (e.g., specific experimental procedure, literature curation, computational inference, etc). This information helps the user to evaluate the causal statement. The evidence can be a combination of multiple ones (e.g., a causal statement manually extracted from a manuscript based on the results of an experiment).
 
 Ontology recommendation:  [Evidence & Conclusion Ontology](http://www.evidenceontology.org/)
+
+##### Experimental setup (optional)
+If the type of evidence is an experiment, the experimental setup corresponds to a specific experimental condition used to detect an entity's involvement in a causal statement. For example, the overexpression of a gene.
+
+Ontology recommendation: 
+* [Molecular Interaction Controlled Vocabulary](https://www.ebi.ac.uk/ols/ontologies/mi) - branch [experimental preparation](https://www.ebi.ac.uk/ols/ontologies/mi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FMI_0346)
+* [Evidence & Conclusion Ontology](http://www.evidenceontology.org/).
 
 
 ### Available context of the causal statement (optional)
@@ -122,17 +129,14 @@ Ontology recommendation:
 * [BRENDA](https://www.brenda-enzymes.org/ontology.php?ontology_id=3)
 * [Uberon](https://uberon.github.io/) which covers also body parts and organs.
 
-##### Cell type
-The cell type where the causal interaction occurs.
+##### Cell type or cell line
+The cell type  or cell line where the causal interaction is observed.
 
-Ontology recommendation:
+Ontology recommendation for cell type:
 * [Cell Ontology](http://www.obofoundry.org/ontology/cl.html)
 * [BRENDA](https://www.brenda-enzymes.org/ontology.php?ontology_id=3)
 
-##### Cell Line
-The cell line where the causal statement is observed. 
-
-Ontology recommendation:
+Ontology recommendation for cell line:
 * [Cellosaurus](https://web.expasy.org/cellosaurus/) for cell line
 * [BRENDA](https://www.brenda-enzymes.org/ontology.php?ontology_id=3)
 
@@ -142,18 +146,11 @@ The cellular component corresponds to the cellular localization (or compartment)
 Ontology recommendation:  [Gene Ontology Cellular Component](http://geneontology.org/) (GO:CC).
 
 
-#### Experimental setup
-The experimental setup corresponds to a specific experimental condition used to detect an entity's involvement in a causal statement. For example, the overexpression of a gene.
-
-Ontology recommendation: 
-* [Molecular Interaction Controlled Vocabulary](https://www.ebi.ac.uk/ols/ontologies/mi) - branch [experimental preparation](https://www.ebi.ac.uk/ols/ontologies/mi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FMI_0346)
-* [Evidence & Conclusion Ontology](http://www.evidenceontology.org/).
-
 ## Summary
 The following graph provides an overview of the list of terms requested to be checked in MI2CAST:
 
 <p align="center">
-  <img src="https://github.com/vtoure/MI2CAST/blob/master/images/mi2cast.svg" alt="MI2CAST terms"/>
+  <img src="https://github.com/MI2CAST/MI2CAST/blob/master/images/mi2cast.svg" alt="MI2CAST terms"/>
 </p>
 
 
