@@ -17,8 +17,9 @@ This example of genetic regulation is based on the following paper: "[Characteri
 | reference | [PMID:16179649](https://www.ncbi.nlm.nih.gov/pubmed/16179649) | "Characterization of E2F8, a novel..." | Pubmed |
 | evidence | [ECO:0005648](http://purl.obolibrary.org/obo/ECO_0005648) | luciferase reporter gene assay evidence used in manual assertion | Evidence and Conclusion Ontology |
 | biological mechanism | [MI:2247](http://purl.obolibrary.org/obo/MI_2247) | transcription regulation | PSI-MI |
-| compartment | [GO:0005634](http://purl.obolibrary.org/obo/GO_0005634) | nucleus | GO:CC |
-| taxon | [NCBI:txid9606](http://purl.obolibrary.org/obo/NCBITaxon_9606) | Homo sapiens | NCBI taxonomy |
+| compartment interaction | [GO:0005634](http://purl.obolibrary.org/obo/GO_0005634) | nucleus | GO:CC |
+| taxon source | [NCBI:txid9606](http://purl.obolibrary.org/obo/NCBITaxon_9606) | Homo sapiens | NCBI taxonomy |
+| taxon source | [NCBI:txid9606](http://purl.obolibrary.org/obo/NCBITaxon_9606) | Homo sapiens | NCBI taxonomy |
 | cell line | [BTO:0001938](http://purl.obolibrary.org/obo/BTO_0001938) | human osteosarcoma cell line | BRENDA |
 | experimental setup source 1 | [MI:0506](http://purl.obolibrary.org/obo/MI_0506) | over expressed level | PSI-MI |
 | experimental setup source 2 | [MI:0331](http://purl.obolibrary.org/obo/MI_0331) | engineered | PSI-MI |

@@ -22,9 +22,9 @@ PKA is a tetramer composed of two regulatory subunits and two catalytic subunits
 | evidence | [ECO:0000302](http://purl.obolibrary.org/obo/ECO_0000302) | author statement used in manual assertion | Evidence and Conclusion Ontology |
 | biological activity source | [GO:0034237]( http://purl.obolibrary.org/obo/GO_0034237) | protein kinase A regulatory subunit binding | GO:MF |
 | biological activity target | [GO:0004672]( http://purl.obolibrary.org/obo/GO_0004672) | protein kinase activity | GO:MF |
-| compartment | [GO:0005737]( http://purl.obolibrary.org/obo/GO_0005737) | cytoplasm | GO:CC |
-| taxon | [NCBI:txid9606](http://purl.obolibrary.org/obo/NCBITaxon_9606) | Homo sapiens | NCBI taxonomy |
-
+| compartment interaction | [GO:0005737]( http://purl.obolibrary.org/obo/GO_0005737) | cytoplasm | GO:CC |
+| taxon source | [NCBI:txid9606](http://purl.obolibrary.org/obo/NCBITaxon_9606) | Homo sapiens | NCBI taxonomy |
+| taxon target | [NCBI:txid9606](http://purl.obolibrary.org/obo/NCBITaxon_9606) | Homo sapiens | NCBI taxonomy 
 
 ## Written explanation of the causal statement
 The chemical 3',5'-cyclic AMP has a protein kinase A regulatory subunit binding activity that up-regulates the protein kinase activity of PRKACA in the cytoplasm. This regulation is identified in humans and has been assessed by a curator based on author statement from the following publication: ["Protein kinase A catalytic subunit isoform PRKACA; history, function and physiology" by Turnham and Scott](https://dx.doi.org/10.1016%2Fj.gene.2015.11.052).
