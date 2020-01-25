@@ -16,7 +16,7 @@ This example of genetic regulation is based on the following paper: "[Characteri
 | effect | [MI:2240](http://purl.obolibrary.org/obo/MI_2240) | down-regulates | PSI-MI |
 | reference | [PMID:16179649](https://www.ncbi.nlm.nih.gov/pubmed/16179649) | "Characterization of E2F8, a novel..." | Pubmed |
 | evidence | [ECO:0005648](http://purl.obolibrary.org/obo/ECO_0005648) | luciferase reporter gene assay evidence used in manual assertion | Evidence and Conclusion Ontology |
-| biological mechanism | [MI:2247](http://purl.obolibrary.org/obo/MI_2247) | transcription regulation | PSI-MI |
+| biological mechanism | [MI:2247](http://purl.obolibrary.org/obo/MI_2247) | transcriptional regulation | PSI-MI |
 | compartment interaction | [GO:0005634](http://purl.obolibrary.org/obo/GO_0005634) | nucleus | GO:CC |
 | taxon source | [NCBI:txid9606](http://purl.obolibrary.org/obo/NCBITaxon_9606) | Homo sapiens | NCBI taxonomy |
 | taxon source | [NCBI:txid9606](http://purl.obolibrary.org/obo/NCBITaxon_9606) | Homo sapiens | NCBI taxonomy |
@@ -29,3 +29,13 @@ This example of genetic regulation is based on the following paper: "[Characteri
 
 ## Written explanation of the causal statement
 E2F8 is a protein that down-regulates the transcription of CCNE1 gene. This causal statement has been a manually assessed from a luciferase reporter gene assay that is described in the Christensen et al.'s article. In the experiment, both entities were engineered: CCNE1's transcription regulatory region only and E2F8 has been overexpressed. This causal statement occurs in human, specifically in this example, in the nucleus of the human osteosarcoma cell.
+
+## Formats
+
+The file formats given below try to describe in the best possible way the example shown above, complying with the formats' standards.  
+
+[PSI-MITAB2.8](/MI2CAST/examples/files/TF-TG.tab)  
+> Note: The evidence is annotated with a PSI-MI CV term ("MI:0686" - reporter gene assay) as PSI-MITAB only allows the use of MI CV for this column.  
+
+
+causalJSON.. in preparation.
