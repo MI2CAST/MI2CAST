@@ -34,7 +34,7 @@ E2F8 is a protein that down-regulates the transcription of CCNE1 gene. This caus
 
 The file formats given below try to describe in the best possible way the example shown above, complying with the formats' standards.  
 
-[PSI-MITAB2.8](/MI2CAST/examples/files/TF-TG.tab)  
+[PSI-MITAB2.8](https://github.com/MI2CAST/MI2CAST/blob/master/examples/files/TF-TG.tab)  
 > Note: The evidence is annotated with a PSI-MI CV term ("MI:0686" - reporter gene assay) as PSI-MITAB only allows the use of MI CV for this column.  
 
 
