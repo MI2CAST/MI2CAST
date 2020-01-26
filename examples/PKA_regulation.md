@@ -37,4 +37,5 @@ The file formats given below try to describe in the best possible way the exampl
 > Note: The evidence is annotated with a PSI-MI CV term ("MI:0362" - inference) as PSI-MITAB only allows the use of MI CV for this column.  
 
 
-causalJSON.. in preparation.
+[causalJSON](https://github.com/MI2CAST/MI2CAST/blob/master/examples/files/PKA-reg.json)  
+
