@@ -1,37 +1,38 @@
 # Information content of molecular causal statements
-The MI2CAST (Minimum Information about a Molecular Interaction Causal Statement) guidelines describe information that is necessary to depict causal interactions in molecular biology. The aim is to homogenize their representation for better usability and understanding, by making the data “FAIR” (Findable, Accessible, Interoperable and Reproducible).
+The Minimum Information about a Molecular Interaction Causal Statement (MI2CAST) guidelines describe the minimum and necessary information to depict causal interactions in molecular biology, as well as contextual details. The aim is to homogenize their representation for better usability and understanding, by making the data “FAIR” (Findable, Accessible, Interoperable and Reproducible).
 
 These guidelines target:
-* biological curators on the information content to provide about molecular causal interactions,
-* biological experimentalists to assess a list of criteria necessary to contextualize causal interactions,
-* tool developers and text miners to know the type of information that can be expected
+* biological curators on the information content to provide when curating a molecular causal interaction,
+* biological experimentalists to assess a list of criteria to better contextualize causal interactions,
+* causal interactions' data users (modellers, tool developers) to be aware of the type of information that can be expected.
 
 
 ## Introduction to causal statements
-The core of a causal statement is composed of three elements: the *source entity*, the *causal interaction* and the *target entity*. It is a directed interaction between biological entities where a *source entity* (regulator) influences the activity or the quantity of a *target entity* (regulatee). The *causal interaction* can be direct (without intermediates) or indirect (the causal effect of *source entity* is transmitted to the *target entity* by a third).
+The core of a causal statement is composed of three elements: the *source entity*, the *causal interaction* and the *target entity*. It is a directed (i.e., oriented) interaction between biological entities where a *source entity* (regulator) influences the activity of a *target entity* (regulatee). The *causal interaction* can be direct (without intermediates) or indirect (the causal effect of *source entity* is transmitted to the *target entity* by a third).
 
 <p align="center">
   <img src="https://github.com/MI2CAST/MI2CAST/blob/master/images/causalStatement.svg" alt="causal statement"/>
 </p>
 
-Furthermore, one big challenge relies on capturing enough contextual information to gradually enrich a causal statement. This type of information may be diffuse and difficult to curate. With these guidelines, we hope to formalize the depiction of that metadata to obtain contextualized causal statements that can be used for applications in systems biology and systems medicine.
+One big challenge relies on capturing enough contextual information to enrich and disambiguate a causal statement. This type of information may be diffuse and difficult to curate. With these guidelines, we hope to formalize the depiction of that metadata to generate contextualized causal statements that can be used properly for applications in systems biology and systems medicine.
 
 
 ## The MI2CAST rules
 MI2CAST defines four main rules:
-- Rule 1: The source and target entities must be specified
-- Rule 2: The effect must be specified
-- Rule 3: The provenance and evidence must be specified
-- Rule 4: The defining context should be specified
+- __Rule 1__: The source and target entities must be specified
+- __Rule 2__: The effect of the interaction must be specified
+- __Rule 3__: The provenance and evidence types of the annotation must be specified
+- __Rule 4__: The defining contextual details should be specified
 
-In addition to the rules, specific terms are advised to be annotated when the data is available. For each term, recommendations on ontologies and controlled vocabularies to use are suggested.
+
+>Note: In Rule 4, specific terms are advised to be annotated whenever the data is available and relevant for the causal interaction to occur. For each term, recommendations on ontologies and controlled vocabularies to use are suggested.
 
 
 ### Entity: source and target entity of the causal statement (mandatory)
-A unique identifier must be provided to identify the specific biological entity involved in the causal statement.
+A unique identifier must be provided to identify the specific biological entity involved in the causal statement.  
 A causal statement has at least one source entity and one target entity.
 
-We recommend to use different ontologies depending on the type of the biological entity:
+Ontologies recommendations:
 * Gene: [ensembl gene ID](http://www.ensembl.org), [Entrez gene ID](https://www.ncbi.nlm.nih.gov/gene)
 * RNA (non coding): [rna central ID](http://rnacentral.org/)
 * mRNA: 
@@ -56,9 +57,10 @@ We recommend to use different ontologies depending on the type of the biological
   <img src="https://github.com/MI2CAST/MI2CAST/blob/master/images/identifiers.svg" alt="identifiers recommendation"/>
 </p>
 
+> Note: This list does not preclude the use of other identifiers, as long as appropriate ones are provided.
 
 ### Effect of the causal statement (mandatory)
-The effect exerted by the source entity upon the target entity can correspond to an up-regulation or a down-regulation of the target.
+The effect corresponds to the regulatory outcome exerted by the source entity upon the target entity. In general, it can correspond to an increase or decrease of the target.
 
 Ontology recommendation: 
 * [Molecular Interaction](https://www.ebi.ac.uk/ols/ontologies/mi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FMI_2234)
@@ -66,33 +68,38 @@ Ontology recommendation:
 
 
 ### Provenance and evidence type of the causal statement (mandatory)
-The origin of the causal statement provides information about the assessment and the provenance of the causal statement: In which publication this causal relationship has been found? How was the causal interaction generated? It provides some criteria to be able to rank a causal statement.
+The provenance of the causal statement corresponds to the reference to scientific reports and provides data consumers information about the quality of an annotation: In which publication this causal relationship has been found? 
+
+The evidence type corresponds to experiment or any data the causal interaction is based: How was the causal interaction proven and generated?
 
 #### Reference
-The reference relates to a publication or a combination of publications that allowed the identification of a causal interaction.
+The reference relates to either a publication where the causal statement is extracted from. If a combination of publications led to the creation of the causal interaction, then the list of articles must be provided.
 
 Ontology recommendation: 
 * [PubMed ID](https://www.ncbi.nlm.nih.gov/pmc/pmctopmid/)
-* [DOI](https://www.doi.org/) in the case of articles from preprint servers.
+* [DOI](https://www.doi.org/) in the case of articles not reference in MEDLINE (e.g., articles from preprint servers).
 
 #### Type of evidence
-The evidence describes how the causal statement has been annotated and has been assessed (e.g., specific experimental procedure, literature curation, computational inference, etc). This information helps the user to evaluate the causal statement. The evidence can be a combination of multiple ones (e.g., a causal statement manually extracted from a manuscript based on the results of an experiment).
+The evidence describes how the causal statement has been annotated and has been assessed (e.g., specific experimental procedure, literature curation, computational inference, etc). This information helps the user to evaluate the causal statement. The evidence can be a combination of multiple ones (e.g., a causal interaction assessed from the necessary combination of an author statement and the results of an experiment). The annotation of the evidence type should be as specific as possible
 
-Ontology recommendation:  [Evidence & Conclusion Ontology](http://www.evidenceontology.org/)
-
-##### Experimental setup (optional)
-If the type of evidence is an experiment, the experimental setup corresponds to a specific experimental condition used to detect an entity's involvement in a causal statement. For example, the overexpression of a gene.
-
-Ontology recommendation: 
-* [Molecular Interaction Controlled Vocabulary](https://www.ebi.ac.uk/ols/ontologies/mi) - branch [experimental preparation](https://www.ebi.ac.uk/ols/ontologies/mi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FMI_0346)
+Ontology recommendation:  
 * [Evidence & Conclusion Ontology](http://www.evidenceontology.org/).
 
+##### Experimental setup (optional)
+If the type of evidence is an experiment, the experimental setup corresponds to a particular experimental conditions supporting the experiment. It specifies the design of the two entities (e.g., overexpression of the source entity).
 
-### Available context of the causal statement (optional)
+Ontology recommendation:  
+* [Evidence & Conclusion Ontology](http://www.evidenceontology.org/)
+* [Molecular Interaction Controlled Vocabulary](https://www.ebi.ac.uk/ols/ontologies/mi) - branch [experimental preparation](https://www.ebi.ac.uk/ols/ontologies/mi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FMI_0346).
+
+
+### Defining contextual details of the causal statement (optional)
 The context informs about the necessary circumstances or observed conditions under which the source entity, the target entity or the causal interaction need to comply with for the causal statement to occur. Every single contextual information in Rule 4 is not necessarily always available for all causal statements. Consequently, only the known and relevant contextual information for a causal statement should be annotated.  
 
 #### Biological activity or biological mechanism
-The biological function corresponds to the molecular activity of the entity that is the cause of the regulation or that is regulated (e.g., kinase activity). If this information is not available, the biological mechanism of the causal statement that constitutes the biological effect of the source entity on the target entity (e.g., the source entity phosphorylates the target entity which increases the target's activity) should be provided.
+The biological activity corresponds to the molecular activity of the entity causing the regulation or that is regulated (e.g., kinase activity, binding activity). If this information is not available, the biological mechanism of the causal statement that constitutes the biological effect of the source entity on the target entity (e.g., the source entity phosphorylates the target entity which increases the target's activity) should be provided, if available.
+
+When the biological mechanism involves a change in the state of the target, the __modified residue__ and its __position__ may be captured (see [Biological modification](#biological-modification)). This can help in understanding which biological activity of the target is affected by the causal effect.   
 
 Ontology recommendation: 
 * [Gene Ontology Molecular Function](http://geneontology.org/) (GO:MF) for the biological activity,
@@ -101,33 +108,36 @@ Ontology recommendation:
 
 
 #### Biological type
-The biological type of the entity (e.g., gene, protein, chemical, complex, family, etc) should be provided when the entity's identifier does not correspond to the type of the entity truly annotated. For instance, a publication mentions a transcript but there is no identifier provided of the specific transcript. The curator can then annotate the entity with a gene identifier and specify the biological type as "transcript".
+The biological type of the entity corresponds to the biological nature of the entity (e.g., gene, protein, complex, family, etc) and it should be provided only when the entity's identifier does not correspond to the type of the entity truly annotated. For instance, a publication mentions a transcript but there is no identifier provided of the specific transcript. The curator can then annotate the entity with a gene identifier and specify the biological type as "transcript".
 
 Ontology recommendation: [Molecular Interaction Controlled Vocabulary](https://www.ebi.ac.uk/ols/ontologies/mi) - branch  [interactor type](https://www.ebi.ac.uk/ols/ontologies/mi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FMI_0313).
 
 #### Biological modification
-The biological modification corresponds to physical changes of an entity necessary for the causal regulation to occur (e.g., the source entity should be phosphorylated at residue XXX in position YYY to up-regulate the target).
+The biological modification corresponds to the physical state of an entity prior to the causal regulation that is needed to observe the causality (e.g., the source entity is phosphorylated at residue XXX in position YYY which enables the increase of the target).
 
-We recommend to annotate:
-* the modification type (e.g., phosphorylation of a protein, methylation of a gene) for which we recommend using [PSI-MOD](https://www.ebi.ac.uk/ols/ontologies/mod) for proteins, the [SO](http://www.sequenceontology.org/) for genes
+To represent the biological modification, we recommend to represent:
+* the modification type (e.g., phosphorylation of a protein, methylation of a gene) using [PSI-MOD](https://www.ebi.ac.uk/ols/ontologies/mod) for proteins, the [SO](http://www.sequenceontology.org/) for genes
 * the modified residue, if known, using [ChEBI](https://www.ebi.ac.uk/chebi/)
-* the position of the modification with a number, if known
+* the position of the modification with a number indicating the protein sequence position of the modified residue, if known.
 
 
-#### The location of the causal interaction or the entity
-The location of the causal interaction or the entity contains different levels of locational definitions from the highest level being the taxon to the most detailed level being the cellular component.
-
-##### Taxon
-The taxon corresponds to the organism where the causal regulation has its native function. The taxon can also refer to the organism of the source or the target entity, to be able to distinguish causality assessed with entities from different taxons (heterologous case). Finally, this information can be implicitly defined in the Entity's identifier (Uniprot ID, Ensembl ID). 
+#### Taxon
+The taxon corresponds to the organism where the causal regulation has its native function and is usually defined through the entity's identifier. In case of heterologous system assays, each entity needs to be annotated with its species of origin.
 
 Ontology recommendation: [Taxonomy ID](https://www.ncbi.nlm.nih.gov/taxonomy) from NCBI.
+
+#### The location of the causal interaction or the entity
+The physical location corresponds to the precise localization where a causal interaction is observed or an entity is located. Different levels of locational definitions from the highest level being the tissue type to the most detailed level being the cellular component can be annotated.
+
 
 ##### Tissue type
 The tissue type where the causal interaction occurs.
 
 Ontology recommendation: 
 * [BRENDA](https://www.brenda-enzymes.org/ontology.php?ontology_id=3)
-* [Uberon](https://uberon.github.io/) which covers also body parts and organs.
+* [Uberon](https://uberon.github.io/) which covers also body parts and organs
+* [Plant Ontology](http://planteome.org/) for plants,
+* [Fungal Anatomy Ontology](https://github.com/obophenotype/fungal-anatomy-ontology) for fungi.
 
 ##### Cell type or cell line
 The cell type  or cell line where the causal interaction is observed.
@@ -141,7 +151,7 @@ Ontology recommendation for cell line:
 * [BRENDA](https://www.brenda-enzymes.org/ontology.php?ontology_id=3)
 
 ##### Cellular component
-The cellular component corresponds to the cellular localization (or compartment) where the entities are localized or where the causal interaction occurs. The causal interaction can occur inside a cell or between two cells.
+The cellular component corresponds to the cellular localization (or compartment) where the interaction occurs if one compartment is involved or where the entities are located if multiple compartments are involved. When describing a translocation of a target entity into another compartment, the entity’s original location should be annotated. The entity’s new location could be conveyed by a translocation mechanism term (in [biological mechanism](#biological-activity-or-biological-mechanism); e.g., ‘import into nucleus’ (GO:0051170)).
 
 Ontology recommendation:  [Gene Ontology Cellular Component](http://geneontology.org/) (GO:CC).
 
@@ -155,7 +165,7 @@ The following graph provides an overview of the list of terms requested to be ch
 
 
 ## MI2CAST Supports
-In this section, we will provide a list of formats or tools that support the MI2CAST guidelines to represent causal statements.
+In this section, we will provide a list of formats or tools that support the concepts defined in the MI2CAST guidelines to represent causal statements.
 
 ### causalBuilder
 
