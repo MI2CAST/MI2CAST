@@ -1,0 +1,46 @@
+{
+  "causalStatement": [
+    {
+      "source": {
+        "identifier": "http://purl.obolibrary.org/obo/CHEBI_17489",
+        "name": "3',5'-cyclic AMP",
+        "biologicalActivity": {
+          "identifier": "http://purl.obolibrary.org/obo/GO_0034237",
+          "name": "protein kinase A regulatory subunit binding"
+        }
+      },
+      "effect": {
+        "identifier": "http://purl.obolibrary.org/obo/MI_2236",
+        "name": "up-regulates activity",
+        "effectCompartment": {
+          "identifier": "http://purl.obolibrary.org/obo/GO_0005737",
+          "name": "cytoplasm"
+        }
+      },
+      "target": {
+        "identifier": "https://www.uniprot.org/uniprot/P17612",
+        "name": "KAPCA_HUMAN",
+        "biologicalActivity": {
+          "identifier": "http://purl.obolibrary.org/obo/GO_0004672",
+          "name": "protein kinase activity"
+        }
+      },
+      "references": [
+        {
+          "reference0": {
+            "identifier": "https://www.ncbi.nlm.nih.gov/pubmed/26687711",
+            "name": "PMID:26687711"
+          }
+        }
+      ],
+      "evidences": [
+        {
+          "evidence0": {
+            "identifier": "http://purl.obolibrary.org/obo/ECO_0000302",
+            "name": "author statement used in manual assertion"
+          }
+        }
+      ]
+    }
+  ]
+}
