@@ -1,0 +1,58 @@
+{
+  "causalStatement": [
+    {
+      "source": {
+        "identifier": "https://www.rnacentral.org/rna/URS000056E1DA_9913",
+        "name": "URS000056E1DA_9913",
+        "experimentalSetups": [
+          {
+            "experimentalSetup0": {
+              "identifier": "http://purl.obolibrary.org/obo/MI_0506",
+              "name": "over expressed level"
+            }
+          }
+        ]
+      },
+      "effect": {
+        "identifier": "http://purl.obolibrary.org/obo/RO_0002430",
+        "name": "involved in negative regulation of",
+        "cellType": {
+          "identifier": "http://purl.obolibrary.org/obo/CL_0002557",
+          "name": "fibroblast of pulmonary artery"
+        }
+      },
+      "target": {
+        "identifier": "http://purl.obolibrary.org/obo/GO_0048144",
+        "name": "fibroblast proliferation",
+        "experimentalSetups": [
+          {
+            "experimentalSetup0": {
+              "identifier": "http://purl.obolibrary.org/obo/MI_0331",
+              "name": "engineered"
+            }
+          }
+        ]
+      },
+      "references": [
+        {
+          "reference0": {
+            "identifier": "https://www.ncbi.nlm.nih.gov/pubmed/24122720",
+            "name": "PMID:24122720"
+          }
+        }
+      ],
+      "evidences": [
+        {
+          "evidence0": {
+            "identifier": "http://purl.obolibrary.org/obo/ECO_0005802",
+            "name": "cell transfection experiment evidence used in manual assertion"
+          },
+          "evidence1": {
+            "identifier": "http://purl.obolibrary.org/obo/ECO_0001235",
+            "name": "MTT assay evidence used in manual assertion"
+          }
+        }
+      ]
+    }
+  ]
+}
