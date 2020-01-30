@@ -7,6 +7,10 @@
         "experimentalSetups": [
           {
             "experimentalSetup0": {
+              "identifier": "http://purl.obolibrary.org/obo/MI_0331",
+              "name": "engineered"
+            },
+            "experimentalSetup1": {
               "identifier": "http://purl.obolibrary.org/obo/MI_0506",
               "name": "over expressed level"
             }
@@ -23,15 +27,7 @@
       },
       "target": {
         "identifier": "http://purl.obolibrary.org/obo/GO_0048144",
-        "name": "fibroblast proliferation",
-        "experimentalSetups": [
-          {
-            "experimentalSetup0": {
-              "identifier": "http://purl.obolibrary.org/obo/MI_0331",
-              "name": "engineered"
-            }
-          }
-        ]
+        "name": "fibroblast proliferation"
       },
       "references": [
         {
@@ -44,12 +40,12 @@
       "evidences": [
         {
           "evidence0": {
-            "identifier": "http://purl.obolibrary.org/obo/ECO_0005802",
-            "name": "cell transfection experiment evidence used in manual assertion"
-          },
-          "evidence1": {
             "identifier": "http://purl.obolibrary.org/obo/ECO_0001235",
             "name": "MTT assay evidence used in manual assertion"
+          },
+          "evidence1": {
+            "identifier": "http://purl.obolibrary.org/obo/ECO_0005802",
+            "name": "cell transfection experiment evidence used in manual assertion"
           }
         }
       ]

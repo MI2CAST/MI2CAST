@@ -21,11 +21,11 @@ When the expression of MicroRNA-124 is experimentally increased, fibroblasts do 
 | evidence 2 | [ECO:0001235](http://purl.obolibrary.org/obo/ECO_0001235) | MTT assay evidence used in manual assertion | Evidence and Conclusion Ontology |
 | cell type | [CL:0002557]( http://purl.obolibrary.org/obo/GO_0005737) | fibroblast of pulmonary artery | CL |
 | experimental setup source 1 | [MI:0506](http://purl.obolibrary.org/obo/MI_0506) | over expressed level | PSI-MI |
-| experimental setup target 2 | [MI:0331](http://purl.obolibrary.org/obo/MI_0331) | engineered | PSI-MI |
+| experimental setup source 2 | [MI:0331](http://purl.obolibrary.org/obo/MI_0331) | engineered | PSI-MI |
 
 
 ## Written explanation of the causal statement
-The Bos baurus miRNA-124 is involved in the negative regulation of the fibroblast proliferation process. This regulation is observed in a fibroblast of pulmonary artery cell, through a combination of a cell transfection experiment and an MTT assay described in the following publication: ["MicroRNA-124 controls the proliferative, migratory, and inflammatory phenotype of pulmonary vascular fibroblasts." by Wang et al.](https://doi.org/10.1161/CIRCRESAHA.114.301633). In these experiments, the miRNA-124 has been over-expressed while the fibroblast has been engineered.
+The Bos baurus miRNA-124 is involved in the negative regulation of the fibroblast proliferation process. This regulation is observed in a fibroblast of pulmonary artery cell, through a combination of a cell transfection experiment and an MTT assay described in the following publication: ["MicroRNA-124 controls the proliferative, migratory, and inflammatory phenotype of pulmonary vascular fibroblasts." by Wang et al.](https://doi.org/10.1161/CIRCRESAHA.114.301633). In these experiments, engineered miRNA-124 has been over-expressed in fibroblasts.
 
 ## Formats
 
