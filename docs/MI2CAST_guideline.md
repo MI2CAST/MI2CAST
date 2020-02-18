@@ -170,6 +170,6 @@ In this section, we will provide a list of formats or tools that support the con
 ### causalBuilder
 
 Interface for the curation of causal statements  
-causalBuilder website: [https://vtoure.github.io/causalBuilder/](https://vtoure.github.io/causalBuilder/)
+causalBuilder website: [https://mi2cast.github.io/causalBuilder/](https://mi2cast.github.io/causalBuilder/)
 
 
