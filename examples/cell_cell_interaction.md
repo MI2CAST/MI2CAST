@@ -40,3 +40,25 @@ When we describe causal interactions between cells, it is not necessary to infor
 #### 4.6: Experimental setup
 ECO:0005580 (flow cytometry evidence used in manual assertion) for the source entity: The source entity has been identified and collected through flow cytocmetry during the experiment, annotated with an ECO term.
 MI:0421 (Identification by antibody) for the target entity: the target entity has been identified via antibody binding during the experiment, annotated with a MI term.
+
+## Written in the Biological Expression Language
+
+```bel
+# metadata
+SET Citation              = {"PubMed", "24122720"}
+SET Taxonomy              = "taxonomy:10116 ! Mus musculus"
+SET EvidenceType          = "eco:0005581 ! enzyme-linked immunoabsorbent assay evidence used in manual assertion"
+SET ExperimentSetupSource = "eco:0005580 ! flow cytometry evidence used in manual assertion"
+SET ExperimentSetupTarget = "mi:0421 ! Identification by antibody"
+
+# BEL Statement
+pop(cl:0000815 ! "Regulatory T cell") =| act(pop(cl:0000844 ! "Germinal center B cell"), ma(go:0030183 ! "B cell differentiation")
+```
+
+Since BEL encodes the polarity of a mechanism in the relationship, the activity of the germinal center B cell
+is set to be GO:0030183 (B cell differentiation), which is the parent apolar term of 
+GO:0045578 (negative regulation of B cell differentiation).
+
+Note, using the `act()` function in combination with the `pop()` function might not technically be BEL
+standards-compliant, but with appropriate examples such as this, it can be added through a BEL enhancement
+proposal.
