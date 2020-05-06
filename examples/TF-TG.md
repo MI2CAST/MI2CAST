@@ -39,3 +39,24 @@ The file formats given below try to describe in the best possible way the exampl
 
 
 causalJSON.. in preparation.
+
+## Written in the Biological Expression Language
+
+```bel
+# metadata
+SET Citation     = {"PubMed", "16179649"}
+SET EvidenceType = "eco:0005648 ! luciferase reporter gene assay evidence used in manual assertion"
+SET Compartment  = "go:0005634 ! nucleus"
+SET CellLine     = "bto:0001938 ! human osteosarcoma cell line"
+SET Taxonomy     = "taxonomy:9606 ! Homo sapiens"
+SET ExperimentSetupSource = {"mi:0506", "mi:0331"}
+SET ExperimentSetupTarget = {"mi:0331", "so:0001679"}
+
+# BEL statement
+p(uniprot:A0AVK6 ! E2F8_HUMAN) -| r(ncbigene:898 ! CCNE1)
+```
+
+BEL allows for multiple of each annotation to be set by using squiggly brackets (with
+the exception of the `SET Citation`, which has its own semantics). It's also optional
+to use the `!` syntax for including the label. It was omitted in this example for the
+experimental setups because they were very long.
