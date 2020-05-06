@@ -33,3 +33,15 @@ The file formats given below try to describe in the best possible way the exampl
 
 [causalJSON](https://github.com/MI2CAST/MI2CAST/blob/master/examples/files/mirna_process.json)  
 
+## Written in the Biological Expression Language
+
+```bel
+# metadata
+SET Citation              = {"PubMed", "24122720"}
+SET CellLine              = "cl:0002557"
+SET EvidenceType          = {"eco:0005802", "eco:0001235"}
+SET ExperimentSetupSource = {"mi:0506", "mi:0331"}
+
+# BEL Statement
+m(rnacentral:URS000056E1DA_9913 ! "Bos taurus (cattle) bta-miR-124") -| bp(go:0048144 ! "fibroblast proliferation")
+```
