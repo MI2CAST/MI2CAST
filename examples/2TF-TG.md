@@ -34,7 +34,9 @@ JUN and FOSL2 are two proteins (transcription factors) that bind together to for
 ## Written in the Biological Expression Language
 
 This interaction can be encoded in BEL script with the following
-metadata and BEL statement.
+metadata and BEL statement. Note that the effect (MI:2235) and
+biological mechanism (MI:2247) are reflected in the relationship
+type and the entity type of the target.
 
 ```bel
 # metadata
