@@ -39,3 +39,18 @@ The file formats given below try to describe in the best possible way the exampl
 
 [causalJSON](https://github.com/MI2CAST/MI2CAST/blob/master/examples/files/PKA-reg.json)  
 
+## Written in the Biological Expression Language
+
+```bel
+# metadata
+SET Citation     = {"PubMed", "26687711"}
+SET EvidenceType = "eco:0000302"
+SET Compartment  = "go:0005737"
+SET Taxonomy     = "taxonomy:9606"
+
+# BEL statement
+act(a(chebi:17489), ma(go:0034237)) => act(p(uniprot:P17612), ma(go:0004672))
+
+# BEL statement with labels included (these can be automatically looked up, though)
+act(a(chebi:17489 ! "3',5'-cyclic AMP"), ma(go:0034237 ! "protein kinase A regulatory subunit binding")) => act(p(uniprot:P17612 ! KAPCA_HUMAN), ma(go:0004672 ! "protein kinase activity"))
+```
