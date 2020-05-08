@@ -20,5 +20,9 @@ Access to the [MI2CAST guidelines](docs/MI2CAST_guideline.md).
 ### Examples for future applications
 * [Cell to cell causal interaction](examples/cell_cell_interaction.md).
 
+## Citation
+For citing MI2CAST, please use the following reference:  
+Touré, V.; Vercruysse, S.; Acencio, M.L.; Lovering, R.; Orchard, S.; Bradley, G.; Casals-Casas, C.; Chaouiya, C.; del-Toro, N.; Flobak, Å.; Gaudet, P.; Hermjakob, H.; Licata, L.; Lægreid, A.; Mungall, C.; Niknejad, A.; Panni, S.; Perfetto, L.; Porras, P.; Pratt, D.; Thieffry, D.; Thomas, P.; Türei, D.; Saez-Rodriguez, J.; Kuiper, M. The Minimum Information about a Molecular Interaction Causal Statement (MI2CAST). Preprints 2020, 2020040480 (doi: [10.20944/preprints202004.0480.v1](https://www.preprints.org/manuscript/202004.0480/v1)).
+
 ## Contact 
 Vasundra Touré ([vasundra.toure@ntnu.no](mailto:vasundra.toure@ntnu.no))
