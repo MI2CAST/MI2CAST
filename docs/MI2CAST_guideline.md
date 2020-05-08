@@ -108,7 +108,8 @@ Ontology recommendation:
 
 
 #### Biological type
-The biological type of the entity corresponds to the biological nature of the entity (e.g., gene, protein, complex, family, etc) and it should be provided only when the entity's identifier does not correspond to the type of the entity truly annotated. For instance, a publication mentions a transcript but there is no identifier provided of the specific transcript. The curator can then annotate the entity with a gene identifier and specify the biological type as "transcript".
+The biological type of the entity corresponds to the biological nature of the entity (e.g., gene, protein, complex, family, etc) and it should be provided when the entity's identifier does not correspond to the type of the entity truly annotated. For instance, a publication mentions a transcript but there is no identifier provided of the specific transcript. The curator can then annotate the entity with a gene identifier and specify the biological type as "transcript".  
+When the entity's identifier comes from a database where defining the entity-type can be ambiguous (e.g., gene nomenclature databases), it is recommended to precise the biological type of entity that is meant. For instance, a source entity annotated with an HGNC identifier where the protein is the meant entity should have the biological type annotated with MI:0326 (protein).  
 
 Ontology recommendation: [Molecular Interaction Controlled Vocabulary](https://www.ebi.ac.uk/ols/ontologies/mi) - branch  [interactor type](https://www.ebi.ac.uk/ols/ontologies/mi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FMI_0313).
 
