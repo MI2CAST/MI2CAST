@@ -9,7 +9,44 @@ A causal statement is defined as an interaction between biological entities (gen
 This repository is a community effort to homogenize and categorize information for representing causal relationships. Terms are defined and ontologies/controlled vocabularies to use are suggested for each term.
 
 ## Documentation
-Access to the [MI2CAST guidelines](docs/MI2CAST_guideline.md).
+Access to the full [MI2CAST guidelines](docs/MI2CAST_guideline.md).
+
+### Short summary
+MI2CAST is composed of four rules expressing the annotations terms expected to be annotated together with a causal interaction. The following table summarizes for each rule the list of terms recommended in MI2CAST (column 1). In addition, a short definition (column 2) is provided as well as the recommended ontologies and controlled vocabularies to use (column 3). The 'mandatory annotation' column informs if the annotation of the term is mandatory or not. If not, it is indicated in which cases an annotation can be expected.
+> Make use of the links to reach web-pages that provide more information.
+
+#### Rule 1: The source and target entities must be specified
+
+|	term |	short definition |	recommended CV/ontology |	mandatory annotation |
+|-|-|-|-|
+| source entity |	regulator entity |	[case-specific, see doc](https://github.com/MI2CAST/MI2CAST/blob/master/docs/MI2CAST_guideline.md#entity-source-and-target-entity-of-the-causal-statement-mandatory)	| yes |
+| target entity |	regulated entity |	[case-specific, see doc](https://github.com/MI2CAST/MI2CAST/blob/master/docs/MI2CAST_guideline.md#entity-source-and-target-entity-of-the-causal-statement-mandatory)	| yes |
+
+#### Rule 2: The effect of the interaction must be specified
+
+|	term |	short definition |	recommended CV/ontology |	mandatory annotation |
+|-|-|-|-|
+| effect |	regulatory relationship from source to target |	[MI](https://www.ebi.ac.uk/ols/ontologies/mi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FMI_2234), [RO](https://www.ebi.ac.uk/ols/ontologies/ro/properties?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FRO_0002506)	| yes |
+
+#### Rule 3: The provenance and evidence types of the annotation must be specified
+
+|	term |	short definition |	recommended CV/ontology |	mandatory annotation |
+|-|-|-|-|
+| reference(s) |	publication(s) where the causal interaction has been curated from |	[PubMed](https://www.ncbi.nlm.nih.gov/pmc/pmctopmid/), [DOI](https://www.doi.org/)	| yes |
+| type of evidence |	assessement of the causal interaction |	[ECO](http://www.evidenceontology.org/)	| yes |
+| experimental setup(s) |	particular experimental setting(s) applied to the entities to observe the causal interaction |	[ECO](http://www.evidenceontology.org/), [MI](https://www.ebi.ac.uk/ols/ontologies/mi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FMI_0346)	| if any and known |
+
+#### Rule 4: The defining contextual details should be specified
+
+| term |	short definition |	recommended CV/ontology |	mandatory annotation |
+|-|-|-|-|
+| biological activity |	molecular function of the entities, involved in the causal interaction |	[GO:MF](http://geneontology.org/)	| if known |
+| biological mechanism |	biological process of the causal interaction |	MI ([causal interaction](https://www.ebi.ac.uk/ols/ontologies/mi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FMI_2233) or [interaction type](https://www.ebi.ac.uk/ols/ontologies/mi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FMI_0190) branch)	| if biological activity is unknown |
+| taxon |	the taxon where the causal interaction is observed or where the entity is from |	[NCBI Taxonomy](https://www.ncbi.nlm.nih.gov/taxonomy)	| if can't be inferred |
+| biological modification(s) |	physical configuration(s) or conformation(s) of an entity |	[see doc](https://github.com/MI2CAST/MI2CAST/blob/master/docs/MI2CAST_guideline.md#biological-modification) | if any |
+| compartment |	cellular location the causal interaction is observed in or the entity is present | [GO:CC](http://geneontology.org/) | if known |
+| tissue type |	the tissue structure with a specific function in which the causal interaction is observed	| [BRENDA](https://www.brenda-enzymes.org/ontology.php?ontology_id=3), [Uberon](https://uberon.github.io/), [PO](http://planteome.org/), [FAO](https://github.com/obophenotype/fungal-anatomy-ontology) |	if known |
+| cell line or cell type |	the cell culture or form where the causal interaction is observed or occurs |	[CL](http://www.obofoundry.org/ontology/cl.html), [BRENDA](https://www.brenda-enzymes.org/ontology.php?ontology_id=3), [Cellosaurus](https://web.expasy.org/cellosaurus/) | if known |
 
 ## Concrete examples
 * [E2F8 (transcription factor) regulation of CCNE1 (target gene) causal statement](examples/TF-TG.md),
