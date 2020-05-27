@@ -19,8 +19,8 @@ MI2CAST is composed of four rules expressing the annotations terms expected to b
 
 |	term |	short definition |	recommended CV/ontology |	mandatory annotation |
 |-|-|-|-|
-| source entity |	regulator entity |	[case-specific, see doc](https://github.com/MI2CAST/MI2CAST/blob/master/docs/MI2CAST_guideline.md#entity-source-and-target-entity-of-the-causal-statement-mandatory)	| yes |
-| target entity |	regulated entity |	[case-specific, see doc](https://github.com/MI2CAST/MI2CAST/blob/master/docs/MI2CAST_guideline.md#entity-source-and-target-entity-of-the-causal-statement-mandatory)	| yes |
+| source entity |	regulator entity |	[case-specific, see doc](https://github.com/MI2CAST/MI2CAST/blob/master/docs/MI2CAST_guideline.md#rule-1-source-and-target-entity-of-the-causal-statement-mandatory)	| yes |
+| target entity |	regulated entity |	[case-specific, see doc](https://github.com/MI2CAST/MI2CAST/blob/master/docs/MI2CAST_guideline.md#rule-1-source-and-target-entity-of-the-causal-statement-mandatory)	| yes |
 
 #### Rule 2: The causal relationship of the interaction must be specified
 
