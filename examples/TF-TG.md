@@ -13,7 +13,7 @@ This example of genetic regulation is based on the following paper: "[Characteri
 |---|---|---|---|
 | source | [UniProtKB:A0AVK6](https://www.uniprot.org/uniprot/A0AVK6) | E2F8 | UniProt |
 | target | [Entrez:898](https://www.ncbi.nlm.nih.gov/gene/898) | CCNE1 | Entrez gene |
-| effect | [MI:2240](http://purl.obolibrary.org/obo/MI_2240) | down-regulates | PSI-MI |
+| causal relationship | [MI:2240](http://purl.obolibrary.org/obo/MI_2240) | down-regulates | PSI-MI |
 | reference | [PMID:16179649](https://www.ncbi.nlm.nih.gov/pubmed/16179649) | "Characterization of E2F8, a novel..." | Pubmed |
 | evidence | [ECO:0005648](http://purl.obolibrary.org/obo/ECO_0005648) | luciferase reporter gene assay evidence used in manual assertion | Evidence and Conclusion Ontology |
 | biological mechanism | [MI:2247](http://purl.obolibrary.org/obo/MI_2247) | transcriptional regulation | PSI-MI |

@@ -8,7 +8,7 @@ These guidelines target:
 
 
 ## Introduction to causal statements
-The core of a causal statement is composed of three elements: the *source entity*, the *causal interaction* and the *target entity*. It is a directed (i.e., oriented) interaction between biological entities where a *source entity* (regulator) influences the activity of a *target entity* (regulatee). The *causal interaction* can be direct (without intermediates) or indirect (the causal effect of *source entity* is transmitted to the *target entity* by a third).
+The core of a causal statement is composed of three elements: the *source entity*, the *causal interaction* and the *target entity*. It is a directed (i.e., oriented) interaction between biological entities where a *source entity* (regulator) influences the activity of a *target entity* (regulatee). The *causal interaction* can be direct (without intermediates) or indirect (the causal relationship of *source entity* is transmitted to the *target entity* by a third).
 
 <p align="center">
   <img src="https://github.com/MI2CAST/MI2CAST/blob/master/images/causalStatement.svg" alt="causal statement"/>
@@ -20,7 +20,7 @@ One big challenge relies on capturing enough contextual information to enrich an
 ## The MI2CAST rules
 MI2CAST defines four main rules:
 - __Rule 1__: The source and target entities must be specified
-- __Rule 2__: The effect of the interaction must be specified
+- __Rule 2__: The causal relationship of the interaction must be specified
 - __Rule 3__: The provenance and evidence types of the annotation must be specified
 - __Rule 4__: The defining contextual details should be specified
 
@@ -28,7 +28,7 @@ MI2CAST defines four main rules:
 >Note: In Rule 4, specific terms are advised to be annotated whenever the data is available and relevant for the causal interaction to occur. For each term, recommendations on ontologies and controlled vocabularies to use are suggested.
 
 
-### Entity: source and target entity of the causal statement (mandatory)
+### Rule 1: Source and target entity of the causal statement (mandatory)
 A unique identifier must be provided to identify the specific biological entity involved in the causal statement.  
 A causal statement has at least one source entity and one target entity.
 
@@ -59,15 +59,15 @@ Ontologies recommendations:
 
 > Note: This list does not preclude the use of other identifiers, as long as appropriate ones are provided.
 
-### Effect of the causal statement (mandatory)
-The effect corresponds to the regulatory outcome exerted by the source entity upon the target entity. In general, it can correspond to an increase or decrease of the target.
+### Rule 2: Causal relationship of the causal statement (mandatory)
+The causal relationship corresponds to the regulatory outcome exerted by the source entity upon the target entity. In general, it can correspond to an increase or decrease of the target.
 
 Ontology recommendation: 
 * [Molecular Interaction](https://www.ebi.ac.uk/ols/ontologies/mi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FMI_2234)
 * [Relation Ontology](https://www.ebi.ac.uk/ols/ontologies/ro/properties?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FRO_0002506).
 
 
-### Provenance and evidence type of the causal statement (mandatory)
+### Rule 3: Provenance and evidence type of the causal statement (mandatory)
 The provenance of the causal statement corresponds to the reference to scientific reports and provides data consumers information about the quality of an annotation: In which publication this causal relationship has been found? 
 
 The evidence type corresponds to experiment or any data the causal interaction is based: How was the causal interaction proven and generated?
@@ -90,16 +90,17 @@ If the type of evidence is an experiment, the experimental setup corresponds to 
 
 Ontology recommendation:  
 * [Evidence & Conclusion Ontology](http://www.evidenceontology.org/)
-* [Molecular Interaction Controlled Vocabulary](https://www.ebi.ac.uk/ols/ontologies/mi) - branch [experimental preparation](https://www.ebi.ac.uk/ols/ontologies/mi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FMI_0346).
+* [Molecular Interaction Controlled Vocabulary](https://www.ebi.ac.uk/ols/ontologies/mi) - branch [experimental preparation](https://www.ebi.ac.uk/ols/ontologies/mi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FMI_0346)
+* [Ontology for Biomedical Investigations](http://obi-ontology.org/).
 
 
-### Defining contextual details of the causal statement (optional)
+### Rule 4: Defining contextual details of the causal statement (mandatory when available and relevant)
 The context informs about the necessary circumstances or observed conditions under which the source entity, the target entity or the causal interaction need to comply with for the causal statement to occur. Every single contextual information in Rule 4 is not necessarily always available for all causal statements. Consequently, only the known and relevant contextual information for a causal statement should be annotated.  
 
 #### Biological activity or biological mechanism
 The biological activity corresponds to the molecular activity of the entity causing the regulation or that is regulated (e.g., kinase activity, binding activity). If this information is not available, the biological mechanism of the causal statement that constitutes the biological effect of the source entity on the target entity (e.g., the source entity phosphorylates the target entity which increases the target's activity) should be provided, if available.
 
-When the biological mechanism involves a change in the state of the target, the __modified residue__ and its __position__ may be captured (see [Biological modification](#biological-modification)). This can help in understanding which biological activity of the target is affected by the causal effect.   
+When the biological mechanism involves a change in the state of the target, the __modified residue__ and its __position__ may be captured (see [Biological modification](#biological-modification)). This can help in understanding which biological activity of the target is affected by the causal relationship.   
 
 Ontology recommendation: 
 * [Gene Ontology Molecular Function](http://geneontology.org/) (GO:MF) for the biological activity,

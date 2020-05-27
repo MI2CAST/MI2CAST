@@ -8,8 +8,8 @@ This example illustrates one of the possible future developments of MI2CAST, nam
 CL:0000815 (Regulatory T cell): the source entity is the regulatory T cell annotated with a Cell Ontology term identifier.
 CL:0000844 (Germinal center B cell): the target entity is the germinal center B cell annotated with a Cell Ontology term identifier.
 
-### Rule 2: Effect
-MI:2240 (down-regulates): the effect of the causal interaction is a down-regulation, annotated with an MI controlled vocabulary term. Regulatory T cell down-regulates Germinal center B cell. 
+### Rule 2: Causal relationship
+MI:2240 (down-regulates): the causal relationship of the interaction is a down-regulation, annotated with an MI controlled vocabulary term. Regulatory T cell down-regulates Germinal center B cell. 
 
 ### Rule 3:
 #### 3.1: Reference

@@ -22,11 +22,11 @@ MI2CAST is composed of four rules expressing the annotations terms expected to b
 | source entity |	regulator entity |	[case-specific, see doc](https://github.com/MI2CAST/MI2CAST/blob/master/docs/MI2CAST_guideline.md#entity-source-and-target-entity-of-the-causal-statement-mandatory)	| yes |
 | target entity |	regulated entity |	[case-specific, see doc](https://github.com/MI2CAST/MI2CAST/blob/master/docs/MI2CAST_guideline.md#entity-source-and-target-entity-of-the-causal-statement-mandatory)	| yes |
 
-#### Rule 2: The effect of the interaction must be specified
+#### Rule 2: The causal relationship of the interaction must be specified
 
 |	term |	short definition |	recommended CV/ontology |	mandatory annotation |
 |-|-|-|-|
-| effect |	regulatory relationship from source to target |	[MI](https://www.ebi.ac.uk/ols/ontologies/mi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FMI_2234), [RO](https://www.ebi.ac.uk/ols/ontologies/ro/properties?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FRO_0002506)	| yes |
+| causal relationship |	regulatory relationship from source to target |	[MI](https://www.ebi.ac.uk/ols/ontologies/mi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FMI_2234), [RO](https://www.ebi.ac.uk/ols/ontologies/ro/properties?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FRO_0002506)	| yes |
 
 #### Rule 3: The provenance and evidence types of the annotation must be specified
 
@@ -34,7 +34,7 @@ MI2CAST is composed of four rules expressing the annotations terms expected to b
 |-|-|-|-|
 | reference(s) |	publication(s) where the causal interaction has been curated from |	[PubMed](https://www.ncbi.nlm.nih.gov/pmc/pmctopmid/), [DOI](https://www.doi.org/)	| yes |
 | type of evidence |	assessement of the causal interaction |	[ECO](http://www.evidenceontology.org/)	| yes |
-| experimental setup(s) |	particular experimental setting(s) applied to the entities to observe the causal interaction |	[ECO](http://www.evidenceontology.org/), [MI](https://www.ebi.ac.uk/ols/ontologies/mi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FMI_0346)	| if any and known |
+| experimental setup(s) |	particular experimental setting(s) applied to the entities to observe the causal interaction |	[ECO](http://www.evidenceontology.org/), [MI](https://www.ebi.ac.uk/ols/ontologies/mi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FMI_0346), [OBI](http://obi-ontology.org/)	| if any and known |
 
 #### Rule 4: The defining contextual details should be specified
 

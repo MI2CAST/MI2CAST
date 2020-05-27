@@ -15,7 +15,7 @@ When the expression of MicroRNA-124 is experimentally increased, fibroblasts do 
 |---|---|---|---|
 | source | [RNAcentral:URS000056E1DA_9913](https://rnacentral.org/rna/URS000056E1DA/9913) | Bos taurus (cattle) bta-miR-124 | RNAcentral |
 | target | [GO:0048144](http://purl.obolibrary.org/obo/GO_0048144) | fibroblast proliferation | GO:BP |
-| effect | [RO:0002430](http://purl.obolibrary.org/obo/RO_0002430) | involved in negative regulation of | RO |
+| causal relationship | [RO:0002430](http://purl.obolibrary.org/obo/RO_0002430) | involved in negative regulation of | RO |
 | reference | [PMID:24122720](https://www.ncbi.nlm.nih.gov/pubmed/24122720) | "MicroRNA-124 controls the proliferative... " | Pubmed |
 | evidence 1 | [ECO:0005802](http://purl.obolibrary.org/obo/ECO_0005802) | cell transfection experiment evidence used in manual assertion | Evidence and Conclusion Ontology |
 | evidence 2 | [ECO:0001235](http://purl.obolibrary.org/obo/ECO_0001235) | MTT assay evidence used in manual assertion | Evidence and Conclusion Ontology |

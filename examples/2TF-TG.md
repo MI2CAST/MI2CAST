@@ -13,7 +13,7 @@ This example of genetic regulation is based on the following paper: "[Induction 
 |---|---|---|---|
 | source | [UniProtKB:P05412](https://www.uniprot.org/uniprot/P05412) *and* [UniProtKB:P15408](https://www.uniprot.org/uniprot/P15408) | JUN *and* FOSL2 | UniProtKB |
 | target | [Entrez:5971](https://www.ncbi.nlm.nih.gov/gene/5971) | RELB | Entrez gene |
-| effect | [MI:2235](http://purl.obolibrary.org/obo/MI_2235) | up-regulates | PSI-MI |
+| causal relationship | [MI:2235](http://purl.obolibrary.org/obo/MI_2235) | up-regulates | PSI-MI |
 | reference | [PMID:15596805](https://www.ncbi.nlm.nih.gov/pubmed/15596805) | "Induction of the RelB NF-kappaB subunit..." | Pubmed |
 | evidence | [ECO:0007682](http://purl.obolibrary.org/obo/ECO_0007682) | reporter gene assay evidence used in manual assertion | Evidence and Conclusion Ontology  |
 | biological mechanism | [MI:2247](http://purl.obolibrary.org/obo/MI_2247) | transcription regulation | PSI-MI |
@@ -34,7 +34,7 @@ JUN and FOSL2 are two proteins (transcription factors) that bind together to for
 ## Written in the Biological Expression Language
 
 This interaction can be encoded in BEL script with the following
-metadata and BEL statement. Note that the effect (MI:2235) and
+metadata and BEL statement. Note that the causal relationship (MI:2235) and
 biological mechanism (MI:2247) are reflected in the relationship
 type and the entity type of the target.
 
