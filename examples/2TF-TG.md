@@ -27,16 +27,16 @@ This example of genetic regulation is based on the following paper: "[Induction 
 
 ## Written explanation of the causal statement
 
-JUN and FOSL2 are two proteins (transcription factors) that bind together to form a complex. This complex up-regulates the transcription of RELB gene. This causal statement is a manual assessement from a reporter gene assay described in Wang and Sonenshein's article. The experiment has been designed in such a way that both all entities were engineered: the source entities were both overexpressed and the target (RELB) was represented by its promoter regulatory region, which is involved in the transcription process. This causal statement has been observed in human, specifically in this case, in the nucleus of a NIH-3T3 cell.
+JUN and FOSL2 are two proteins (transcription factors) that bind together to form a complex. This complex up-regulates the transcription of RELB gene. This causal statement is a manual assessement from a reporter gene assay described in Wang and Sonenshein's article. The experiment has been designed in such a way that both entities were engineered: the source entities were both overexpressed and the target (RELB) was represented by its promoter regulatory region, which is involved in the transcription process. This causal statement has been observed in human, specifically in this case, in the nucleus of a NIH-3T3 cell.
 
 > Note: The two source entities bind together and form a complex. However, this complex does not have a defined identifier in the ComplexPortal database. Thus to define this entity, we have used the Uniprot ID of both entities, and we link them with an *and* relation meaning that both entities are necessary to observe the causal effect on the target.
 
 ## Written in the Biological Expression Language
 
 This interaction can be encoded in BEL script with the following
-metadata and BEL statement. Note that the causal relationship (MI:2235) and
-biological mechanism (MI:2247) are reflected in the relationship
-type and the entity type of the target.
+metadata and BEL statement. Note that the causal relationship (MI:2235, upregulation) and
+biological mechanism (MI:2247, transcription regulation) are reflected in the relationship
+type (`->`, increases) and the target entity type (`r`, rnaAbundance), respectively.
 
 ```bel
 # metadata
