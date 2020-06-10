@@ -42,6 +42,7 @@ MI2CAST is composed of four rules expressing the annotations terms expected to b
 |-|-|-|-|
 | biological activity |	molecular function of the entities, involved in the causal interaction |	[GO:MF](http://geneontology.org/)	| if known |
 | biological mechanism |	biological process of the causal interaction |	MI ([causal interaction](https://www.ebi.ac.uk/ols/ontologies/mi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FMI_2233) or [interaction type](https://www.ebi.ac.uk/ols/ontologies/mi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FMI_0190) branch)	| if biological activity is unknown |
+| biological type | biological nature of the entity | MI ([interactor type](https://www.ebi.ac.uk/ols/ontologies/mi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FMI_0313) branch) | if ambiguous or incorrect from the entity's identifier |
 | taxon |	the taxon where the causal interaction is observed or where the entity is from |	[NCBI Taxonomy](https://www.ncbi.nlm.nih.gov/taxonomy)	| if can't be inferred |
 | biological modification(s) |	physical configuration(s) or conformation(s) of an entity |	[see doc](https://github.com/MI2CAST/MI2CAST/blob/master/docs/MI2CAST_guideline.md#biological-modification) | if any |
 | compartment |	cellular location the causal interaction is observed in or the entity is present | [GO:CC](http://geneontology.org/) | if known |
