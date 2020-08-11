@@ -60,7 +60,7 @@ MI2CAST is composed of four rules expressing the annotations terms expected to b
 
 ## Citation
 For citing MI2CAST, please use the following reference:  
-Touré, V.; Vercruysse, S.; Acencio, M.L.; Lovering, R.; Orchard, S.; Bradley, G.; Casals-Casas, C.; Chaouiya, C.; del-Toro, N.; Flobak, Å.; Gaudet, P.; Hermjakob, H.; Licata, L.; Lægreid, A.; Mungall, C.; Niknejad, A.; Panni, S.; Perfetto, L.; Porras, P.; Pratt, D.; Thieffry, D.; Thomas, P.; Türei, D.; Saez-Rodriguez, J.; Kuiper, M. The Minimum Information about a Molecular Interaction Causal Statement (MI2CAST). Preprints 2020, 2020040480 (doi: [10.20944/preprints202004.0480.v1](https://www.preprints.org/manuscript/202004.0480/v1)).
+Touré, V.; Vercruysse, S.; Acencio, M.L.; Lovering, R.C.; Orchard, S.; Bradley, G.; Casals-Casas, C.; Chaouiya, C.; del-Toro, N.; Flobak, Å.; Gaudet, P.; Hermjakob, H.; Hoyt, C.T.; Licata, L.; Lægreid, A.; Mungall, C.; Niknejad, A.; Panni, S.; Perfetto, L.; Porras, P.; Pratt, D.; Thieffry, D.; Thomas, P.D.; Türei, D.; Saez-Rodriguez, J.; Kuiper, M. The Minimum Information about a Molecular Interaction Causal Statement (MI2CAST).  *Bioinformatics*, 2020, btaa622, [https://doi.org/10.1093/bioinformatics/btaa622](https://doi.org/10.1093/bioinformatics/btaa622)
 
 ## Contact 
 Vasundra Touré ([vasundra.toure@ntnu.no](mailto:vasundra.toure@ntnu.no))
